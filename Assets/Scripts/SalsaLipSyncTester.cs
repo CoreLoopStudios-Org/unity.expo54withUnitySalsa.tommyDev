@@ -11,6 +11,10 @@ public class SalsaLipSyncTester : MonoBehaviour
     [Tooltip("Drag an MP3/WAV from Assets/Audio here to test with real speech")]
     public AudioClip testAudioClip;
 
+    [Header("Mock Test")]
+    public string mockPrompt = "tell me about gemini in details";
+    private MockTestManager _mockManager;
+
     private SalsaAvatarController _controller;
     private string _status = "Ready";
     private float _statusTime;
@@ -18,6 +22,15 @@ public class SalsaLipSyncTester : MonoBehaviour
     void Start()
     {
         _controller = FindFirstObjectByType<SalsaAvatarController>();
+        _mockManager = FindFirstObjectByType<MockTestManager>();
+        
+        // Auto-add MockTestManager if missing (for convenience in Editor)
+        if (_mockManager == null)
+        {
+            _mockManager = gameObject.AddComponent<MockTestManager>();
+            Debug.Log("[SalsaLipSyncTester] Added MockTestManager component");
+        }
+
         if (_controller == null)
             Debug.LogError("[SalsaLipSyncTester] SalsaAvatarController not found!");
         else
@@ -49,6 +62,19 @@ public class SalsaLipSyncTester : MonoBehaviour
             Send("TEST_LIPSYNC", "");
             SetStatus("SALSA lip sync test playing...");
         }
+        y += sp;
+
+        // Mock Test Button
+        GUI.color = new Color(0.7f, 1f, 0.7f); // Light green for highlight
+        if (GUI.Button(new Rect(x, y, w, h), "Mock Test (Gemini + 11Labs)"))
+        {
+            if (_mockManager != null)
+            {
+                _mockManager.RunMockTest(mockPrompt);
+                SetStatus("Starting Mock Test flow...");
+            }
+        }
+        GUI.color = Color.white;
         y += sp;
 
         // Play custom audio clip button

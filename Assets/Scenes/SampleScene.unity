@@ -156,7 +156,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.093748674, g: 0.17028874, b: 0.2905661, a: 0}
+  m_BackGroundColor: {r: 0.4264151, g: 0.4264151, b: 0.4264151, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Script: {fileID: -1091098677, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.Salsa
-  audioSrc: {fileID: 807176310}
+  audioSrc: {fileID: 0}
   waitForAudioSource: 0
   useExternalAnalysis: 0
   audioSourceWaitTarget: {fileID: 0}
@@ -1762,7 +1762,7 @@ MonoBehaviour:
       previewDisplayMode: 0
       collectionExpand: 0
     trigger: 0.80999994
-  configReady: 1
+  configReady: 0
   configNotReadyNotified: 0
   warnOnNullRefs: 1
   isDebug: 0
@@ -2771,12 +2771,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1316645595}
-    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1316645596}
-    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1316645597}
   m_SourcePrefab: {fileID: -4161369568681901532, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
 --- !u!4 &1316645592 stripped
 Transform:
@@ -3788,40 +3782,6 @@ MonoBehaviour:
   trackEnabled: 1
   trackBones: []
   tracklids: []
---- !u!114 &1316645596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807176307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a3a963ab64ec4611ba8c47c82632081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AvatarAnimations
---- !u!95 &1316645597
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807176307}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1335383619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,6 +3793,7 @@ GameObject:
   - component: {fileID: 1335383622}
   - component: {fileID: 1335383621}
   - component: {fileID: 1335383620}
+  - component: {fileID: 1335383623}
   m_Layer: 0
   m_Name: SalsaAvatarController
   m_TagString: Untagged
@@ -3852,7 +3813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4223f5426d994c9e8cab2fcaa652448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SalsaLipSyncTester
-  testAudioClip: {fileID: 8300000, guid: b37e9c96bcc4b4f5fa212f1034921872, type: 3}
+  testAudioClip: {fileID: 8300000, guid: b3412a60cacef194b95ee2e3e5bd2542, type: 3}
+  mockPrompt: tell me about gemini in details
 --- !u!114 &1335383621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3869,7 +3831,7 @@ MonoBehaviour:
   salsa: {fileID: 807176311}
   eyes: {fileID: 1316645595}
   emoter: {fileID: 807176312}
-  avatarAnimations: {fileID: 1316645596}
+  avatarAnimations: {fileID: 0}
 --- !u!4 &1335383622
 Transform:
   m_ObjectHideFlags: 0
@@ -3885,6 +3847,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1335383623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335383619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa229726a735e9143ad6be263eaceaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MockTestManager
+  geminiApiKey: AIzaSyBDrwj_ezcJfay6kVXGuEQOF4wvK0jI57Q
+  elevenLabsApiKey: YOUR_ELEVENLABS_API_KEY
+  voiceId: 21m00Tcm4TlvDq8ikWAM
+  controller: {fileID: 0}
 --- !u!1001 &1421692375
 PrefabInstance:
   m_ObjectHideFlags: 0

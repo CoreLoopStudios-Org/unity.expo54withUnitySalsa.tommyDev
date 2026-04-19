@@ -193,6 +193,24 @@ public class SalsaAvatarController : MonoBehaviour
         StartCoroutine(LoadAndPlayAudio(filePath));
     }
 
+    /// <summary>
+    /// Plays an AudioClip directly (used by Mock Test or local scripts).
+    /// </summary>
+    public void PlayAudioClip(AudioClip clip)
+    {
+        if (clip == null) return;
+        StopAudio();
+
+        _audioSource.clip = clip;
+        _audioSource.Play();
+        _isPlaying = true;
+
+        Debug.Log($"[SalsaAvatarController] Playing clip: {clip.name} ({clip.length:F1}s)");
+        SendToReactNative("AUDIO_STARTED", clip.length.ToString("F2"));
+
+        StartCoroutine(WaitForAudioEnd());
+    }
+
     private void HandleTestLipSync()
     {
         StopAudio();
