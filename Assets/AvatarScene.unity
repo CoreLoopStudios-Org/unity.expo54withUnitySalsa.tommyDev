@@ -760,6 +760,14 @@ PrefabInstance:
       propertyPath: 'm_BlendShapeWeights.Array.data[51]'
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[67]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[68]'
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -808,15 +816,15 @@ MonoBehaviour:
   m_Script: {fileID: 974247159, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.Eyes
-  inspStateFoldoutReferences: 1
-  inspStateFoldoutHeads: 1
+  inspStateFoldoutReferences: 0
+  inspStateFoldoutHeads: 0
   inspStateFoldoutHeadProps: 1
   inspStateFoldoutAnimBones: 0
-  inspStateFoldoutEyes: 1
+  inspStateFoldoutEyes: 0
   inspStateFoldoutEyeProps: 1
-  inspStateFoldoutEyelids: 1
-  inspStateFoldoutEyelidBlinkProps: 1
-  inspStateFoldoutEyelidTrackProps: 1
+  inspStateFoldoutEyelids: 0
+  inspStateFoldoutEyelidBlinkProps: 0
+  inspStateFoldoutEyelidTrackProps: 0
   drawEyeBoneCaptureControls: 0
   drawBlinkBoneCaptureControls: 0
   drawTrackBoneCaputreControls: 0
@@ -1531,7 +1539,7 @@ MonoBehaviour:
         isAnimatorControlled: 0
         useOffset: 0
         useOffsetFollow: 1
-        inspFoldout: 1
+        inspFoldout: 0
         enabled: 1
         isBonePreviewUpdated: 0
         frac: 1
@@ -1553,7 +1561,7 @@ MonoBehaviour:
         isAnimatorControlled: 0
         useOffset: 0
         useOffsetFollow: 1
-        inspFoldout: 1
+        inspFoldout: 0
         enabled: 1
         isBonePreviewUpdated: 0
         frac: 1
@@ -1582,7 +1590,7 @@ MonoBehaviour:
         smr: {fileID: 316494291}
         blendIndex: 67
         minShape: 0
-        maxShape: 1
+        maxShape: 0.01
         eyeGizmo: {fileID: 0}
         eventSender: {fileID: 0}
         animator: {fileID: 0}
@@ -1623,7 +1631,7 @@ MonoBehaviour:
         smr: {fileID: 316494291}
         blendIndex: 68
         minShape: 0
-        maxShape: 1
+        maxShape: 0.01
         eyeGizmo: {fileID: 0}
         eventSender: {fileID: 0}
         animator: {fileID: 0}
@@ -1717,7 +1725,7 @@ MonoBehaviour:
         smr: {fileID: 316494291}
         blendIndex: 67
         minShape: 0
-        maxShape: 1
+        maxShape: 0.01
         eyeGizmo: {fileID: 0}
         eventSender: {fileID: 0}
         animator: {fileID: 0}
@@ -1758,7 +1766,7 @@ MonoBehaviour:
         smr: {fileID: 316494291}
         blendIndex: 68
         minShape: 0
-        maxShape: 1
+        maxShape: 0.01
         eyeGizmo: {fileID: 0}
         eventSender: {fileID: 0}
         animator: {fileID: 0}
@@ -1802,7 +1810,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: ca469594eef1626428729a05987c8997, type: 3}
+  m_Resource: {fileID: 8300000, guid: b3412a60cacef194b95ee2e3e5bd2542, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2079,7 +2087,7 @@ MonoBehaviour:
       inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
-    trigger: 0.01
+    trigger: 0.0625
   - expData:
       name: viseme 2
       components:
@@ -2213,7 +2221,7 @@ MonoBehaviour:
       inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
-    trigger: 0.02
+    trigger: 0.25
   - expData:
       name: sayLarge
       components:
@@ -2347,7 +2355,7 @@ MonoBehaviour:
       inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
-    trigger: 0.03
+    trigger: 0.5625
   configReady: 1
   configNotReadyNotified: 0
   warnOnNullRefs: 1
