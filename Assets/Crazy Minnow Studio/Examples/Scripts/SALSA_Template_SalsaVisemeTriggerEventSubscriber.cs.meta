@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4b6c62e7cc1262149954b359594a255a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148442
+  packageName: SALSA LipSync Suite
+  packageVersion: 2.5.6
+  assetPath: Assets/Crazy Minnow Studio/Examples/Scripts/SALSA_Template_SalsaVisemeTriggerEventSubscriber.cs
+  uploadId: 727448

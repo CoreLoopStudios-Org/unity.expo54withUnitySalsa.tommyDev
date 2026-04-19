@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0509a34342d36ea419474d9ab8ce9ac1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148442
+  packageName: SALSA LipSync Suite
+  packageVersion: 2.5.6
+  assetPath: Assets/Crazy Minnow Studio/Examples/Scripts/SALSA_Template_EventControllerSubscriber.cs
+  uploadId: 727448

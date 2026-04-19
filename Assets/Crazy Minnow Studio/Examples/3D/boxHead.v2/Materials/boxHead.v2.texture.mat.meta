@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e50fd4d1977e2de418d83dccaec81272
+timeCreated: 1490552795
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148442
+  packageName: SALSA LipSync Suite
+  packageVersion: 2.5.6
+  assetPath: Assets/Crazy Minnow Studio/Examples/3D/boxHead.v2/Materials/boxHead.v2.texture.mat
+  uploadId: 727448
