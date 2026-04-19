@@ -71,16 +71,17 @@ public class AvatarAnimations : MonoBehaviour
             foreach (var param in _animator.parameters)
                 _parameterHashes.Add(param.nameHash);
 
-            Debug.Log($"[AvatarAnimations] Animator Controller: {_animator.runtimeAnimatorController.name}");
+            Debug.Log($"[AvatarAnimations] Animator Controller found: {_animator.runtimeAnimatorController.name}");
         }
         else
         {
-            Debug.Log("[AvatarAnimations] No Animator Controller — LateUpdate will apply rest pose");
+            Debug.Log("[AvatarAnimations] No Animator Controller — falling back to procedural LateUpdate");
         }
 
         FindBones();
 
-        if (!_hasAnimatorController && _rightUpperArm != null)
+        // Check if we found at least the critical bones
+        if (_rightUpperArm != null)
         {
             // Store the T-pose rotations (what the Animator writes each frame)
             _tposeRightUpper = _rightUpperArm.localRotation;
@@ -96,7 +97,11 @@ public class AvatarAnimations : MonoBehaviour
             _restLeftLower = _tposeLeftLower * Quaternion.Euler(0f, 3f, 8f);
 
             _bonesReady = true;
-            Debug.Log("[AvatarAnimations] Rest pose calculated — will apply in LateUpdate");
+            Debug.Log("[AvatarAnimations] Rest pose initialized successfully.");
+        }
+        else
+        {
+            Debug.LogError("[AvatarAnimations] CRITICAL: RightUpperArm bone not found! Animations will not work. Check bone names in Hierarchy.");
         }
     }
 
@@ -124,8 +129,11 @@ public class AvatarAnimations : MonoBehaviour
     private void FindBones()
     {
         var animator = GetComponentInChildren<Animator>();
-        if (animator != null && animator.isHuman)
+        
+        // Strategy A: Humanoid Mapping (only works if 'Avatar' slot is filled)
+        if (animator != null && animator.avatar != null && animator.isHuman)
         {
+            Debug.Log("[AvatarAnimations] Using Humanoid Avatar mapping");
             _rightUpperArm = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
             _rightLowerArm = animator.GetBoneTransform(HumanBodyBones.RightLowerArm);
             _rightHand = animator.GetBoneTransform(HumanBodyBones.RightHand);
@@ -133,23 +141,30 @@ public class AvatarAnimations : MonoBehaviour
             _leftLowerArm = animator.GetBoneTransform(HumanBodyBones.LeftLowerArm);
             _headBone = animator.GetBoneTransform(HumanBodyBones.Head);
             _neckBone = animator.GetBoneTransform(HumanBodyBones.Neck);
-
-            Debug.Log($"[AvatarAnimations] Bones found: R.arm={_rightUpperArm != null} " +
-                      $"L.arm={_leftUpperArm != null} head={_headBone != null}");
-            return;
         }
 
-        foreach (var t in GetComponentsInChildren<Transform>())
+        // Strategy B: Name-based search (Fallback for GLBs without an Avatar asset)
+        if (_rightUpperArm == null)
         {
-            string lower = t.name.ToLower();
-            if (lower.Contains("rightupperarm")) _rightUpperArm = _rightUpperArm ?? t;
-            if (lower.Contains("rightlowerarm") || lower.Contains("rightforearm")) _rightLowerArm = _rightLowerArm ?? t;
-            if (lower.Contains("righthand") && !lower.Contains("index") && !lower.Contains("thumb")) _rightHand = _rightHand ?? t;
-            if (lower.Contains("leftupperarm")) _leftUpperArm = _leftUpperArm ?? t;
-            if (lower.Contains("leftlowerarm") || lower.Contains("leftforearm")) _leftLowerArm = _leftLowerArm ?? t;
-            if ((lower == "head" || lower.Contains("head")) && !lower.Contains("top")) _headBone = _headBone ?? t;
-            if (lower.Contains("neck")) _neckBone = _neckBone ?? t;
+            Debug.Log("[AvatarAnimations] Searching hierarchy for bone names...");
+            foreach (var t in GetComponentsInChildren<Transform>())
+            {
+                string n = t.name;
+                // Ready Player Me bone naming conventions
+                if (n.EndsWith("RightUpperArm")) _rightUpperArm = t;
+                else if (n.EndsWith("RightLowerArm") || n.EndsWith("RightForeArm")) _rightLowerArm = t;
+                else if (n.EndsWith("RightHand")) _rightHand = t;
+                else if (n.EndsWith("LeftUpperArm")) _leftUpperArm = t;
+                else if (n.EndsWith("LeftLowerArm") || n.EndsWith("LeftForeArm")) _leftLowerArm = t;
+                else if (n.EndsWith("Head") && !n.Contains("Top")) _headBone = t;
+                else if (n.EndsWith("Neck")) _neckBone = t;
+            }
         }
+
+        Debug.Log($"[AvatarAnimations] Discovery Results: \n" +
+                  $"- Right Arm: {(_rightUpperArm != null ? "FOUND (" + _rightUpperArm.name + ")" : "MISSING")}\n" +
+                  $"- Left Arm: {(_leftUpperArm != null ? "FOUND" : "MISSING")}\n" +
+                  $"- Head: {(_headBone != null ? "FOUND" : "MISSING")}");
     }
 
     // ── Public API ───────────────────────────────────────────────────────
