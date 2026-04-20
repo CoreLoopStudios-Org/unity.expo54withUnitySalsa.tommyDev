@@ -8,21 +8,9 @@ using CrazyMinnow.SALSA; // SALSA LipSync Suite namespace
 /// <summary>
 /// Central bridge between React Native and the Unity avatar.
 /// Uses SALSA LipSync Suite for lip sync, expressions, and idle animations.
-///
-/// REPLACES: AvatarController.cs + AudioLipSync.cs + IdleAnimator.cs + VisemeReceiver.cs
-///
-/// Architecture:
-///   - SALSA handles lip sync (real-time audio analysis)
-///   - Eyes handles blink, saccades, head tracking
-///   - EmoteR handles expressions/emotions
-///   - This script handles: RN bridge, audio loading, body animations
-///
-/// Setup in Inspector:
-///   1. Drag avatar root into "Avatar Root"
-///   2. SALSA, Eyes, EmoteR are set up via Inspector on the avatar (see migration guide)
-///   3. This script just forwards audio to SALSA's AudioSource
-///
-/// Attach to an empty GameObject named "AvatarController" in the scene.
+/// 
+/// All references (Salsa, Eyes, Emoter, Animator) must be assigned manually in the Inspector.
+/// Body animations are handled via Animator Controller triggers.
 /// </summary>
 public class SalsaAvatarController : MonoBehaviour
 {
@@ -30,13 +18,13 @@ public class SalsaAvatarController : MonoBehaviour
     [Tooltip("Root transform of the RPM avatar")]
     public Transform avatarRoot;
 
-    [Header("SALSA References (auto-discovered)")]
+    [Header("SALSA References (Manual Assignment)")]
     [SerializeField] private Salsa salsa;
     [SerializeField] private Eyes eyes;
     [SerializeField] private Emoter emoter;
 
-    [Header("Body Animation")]
-    [SerializeField] private AvatarAnimations avatarAnimations;
+    [Header("Body Animation (Manual Assignment)")]
+    [SerializeField] private Animator animator;
 
     // Audio
     private AudioSource _audioSource;
@@ -54,52 +42,24 @@ public class SalsaAvatarController : MonoBehaviour
 
     void Start()
     {
-        if (avatarRoot == null)
-        {
-            var smr = FindFirstObjectByType<SkinnedMeshRenderer>();
-            if (smr != null)
-                avatarRoot = smr.transform.root;
-        }
-
-        if (avatarRoot == null)
-        {
-            Debug.LogError("[SalsaAvatarController] No avatar root found!");
-            return;
-        }
-
-        // Auto-discover SALSA components on the avatar
-        salsa = avatarRoot.GetComponentInChildren<Salsa>();
-        eyes = avatarRoot.GetComponentInChildren<Eyes>();
-        emoter = avatarRoot.GetComponentInChildren<Emoter>();
-
         // Get SALSA's AudioSource (SALSA creates/manages its own)
         if (salsa != null)
         {
             _audioSource = salsa.audioSrc;
-            Debug.Log($"[SalsaAvatarController] SALSA found — AudioSource ready");
+            Debug.Log($"[SalsaAvatarController] SALSA initialized with AudioSource");
         }
         else
         {
-            Debug.LogWarning("[SalsaAvatarController] SALSA not found on avatar — add it in Inspector");
-            // Fallback: create our own AudioSource
-            _audioSource = avatarRoot.GetComponentInChildren<AudioSource>();
-            if (_audioSource == null)
-                _audioSource = avatarRoot.gameObject.AddComponent<AudioSource>();
+            Debug.LogWarning("[SalsaAvatarController] SALSA reference missing! Lip sync will not work.");
+            _audioSource = GetComponentInChildren<AudioSource>();
         }
 
-        if (eyes != null)
-            Debug.Log("[SalsaAvatarController] Eyes module found — blink/saccades active");
-        if (emoter != null)
-            Debug.Log("[SalsaAvatarController] EmoteR module found — expressions active");
-
-        // Body animations (procedural wave/nod/talk)
-        avatarAnimations = avatarRoot.GetComponentInChildren<AvatarAnimations>();
-        if (avatarAnimations == null)
-            avatarAnimations = avatarRoot.gameObject.AddComponent<AvatarAnimations>();
+        if (animator == null)
+            Debug.LogWarning("[SalsaAvatarController] Animator reference missing! Body animations will not work.");
 
         _isReady = true;
         SendToReactNative("READY", "");
-        Debug.Log("[SalsaAvatarController] Ready — all systems initialized");
+        Debug.Log("[SalsaAvatarController] Ready — manual assignments assumed complete");
     }
 
     void OnApplicationPause(bool paused)
@@ -107,7 +67,6 @@ public class SalsaAvatarController : MonoBehaviour
         if (paused)
         {
             StopAudio();
-            Debug.Log("[SalsaAvatarController] App paused — stopped playback");
         }
         else if (_isReady)
         {
@@ -154,10 +113,6 @@ public class SalsaAvatarController : MonoBehaviour
                     HandleSetIdle(msg.payload);
                     break;
 
-                case "TEST":
-                    SendToReactNative("TEST_ACK", msg.payload);
-                    break;
-
                 default:
                     Debug.LogWarning($"[SalsaAvatarController] Unknown: {msg.type}");
                     break;
@@ -173,17 +128,14 @@ public class SalsaAvatarController : MonoBehaviour
 
     private void HandleAnimation(string animName)
     {
-        if (avatarAnimations == null) return;
+        if (animator == null || animator.runtimeAnimatorController == null) return;
 
-        switch (animName.ToLower())
-        {
-            case "idle": avatarAnimations.PlayIdle(); break;
-            case "wave": avatarAnimations.PlayWave(); break;
-            case "talk": avatarAnimations.PlayTalk(); break;
-            case "nod": avatarAnimations.PlayNod(); break;
-            default: avatarAnimations.PlayByName(animName); break;
-        }
+        // Triggers: wave, nod, talk, idle
+        // Note: Animator state machine should handle returning to 'idle' automatically
+        string trigger = animName.ToLower();
+        animator.SetTrigger(trigger);
 
+        Debug.Log($"[SalsaAvatarController] Animator trigger: {trigger}");
         SendToReactNative("ANIM_STARTED", animName);
     }
 
@@ -193,59 +145,42 @@ public class SalsaAvatarController : MonoBehaviour
         StartCoroutine(LoadAndPlayAudio(filePath));
     }
 
-    /// <summary>
-    /// Plays an AudioClip directly (used by Mock Test or local scripts).
-    /// </summary>
     public void PlayAudioClip(AudioClip clip)
     {
-        if (clip == null) return;
+        if (clip == null || _audioSource == null) return;
         StopAudio();
 
         _audioSource.clip = clip;
         _audioSource.Play();
         _isPlaying = true;
 
-        Debug.Log($"[SalsaAvatarController] Playing clip: {clip.name} ({clip.length:F1}s)");
         SendToReactNative("AUDIO_STARTED", clip.length.ToString("F2"));
-
         StartCoroutine(WaitForAudioEnd());
     }
 
     private void HandleTestLipSync()
     {
+        if (_audioSource == null) return;
         StopAudio();
 
-        // Generate a simple test tone that SALSA can analyze
-        // SALSA works on amplitude, so a vowel-like waveform works great
         var clip = GenerateTestAudio(3f);
         _audioSource.clip = clip;
         _audioSource.Play();
         _isPlaying = true;
 
-        Debug.Log("[SalsaAvatarController] Playing test audio — SALSA will lip sync automatically");
         SendToReactNative("AUDIO_STARTED", "test");
-
         StartCoroutine(WaitForAudioEnd());
     }
 
     private void HandleEmotion(string payload)
     {
-        // EmoteR handles emotions via its own system
-        // For now, log it — EmoteR expressions are configured in the Inspector
         Debug.Log($"[SalsaAvatarController] Emotion: {payload}");
-
-        // If EmoteR is configured with manual triggers, you can call:
-        // emoter?.ManualEmote(emoteIndex, percentage);
     }
 
     private void HandleSetIdle(string payload)
     {
         bool enable = payload != "0" && payload.ToLower() != "false";
-
-        // Toggle Eyes module (blink, saccades, head tracking)
-        if (eyes != null)
-            eyes.enabled = enable;
-
+        if (eyes != null) eyes.enabled = enable;
         Debug.Log($"[SalsaAvatarController] Idle: {(enable ? "ON" : "OFF")}");
     }
 
@@ -253,6 +188,8 @@ public class SalsaAvatarController : MonoBehaviour
 
     private IEnumerator LoadAndPlayAudio(string filePath)
     {
+        if (_audioSource == null) yield break;
+
         AudioType audioType = AudioType.WAV;
         string lower = filePath.ToLower();
         if (lower.EndsWith(".mp3")) audioType = AudioType.MPEG;
@@ -278,14 +215,11 @@ public class SalsaAvatarController : MonoBehaviour
                 yield break;
             }
 
-            // Just assign to SALSA's AudioSource and play — SALSA handles everything
             _audioSource.clip = clip;
             _audioSource.Play();
             _isPlaying = true;
 
-            Debug.Log($"[SalsaAvatarController] Playing: {clip.length:F1}s — SALSA lip sync active");
             SendToReactNative("AUDIO_STARTED", clip.length.ToString("F2"));
-
             yield return new WaitWhile(() => _audioSource.isPlaying);
 
             _isPlaying = false;
@@ -309,13 +243,6 @@ public class SalsaAvatarController : MonoBehaviour
         SendToReactNative("AUDIO_ENDED", "");
     }
 
-    // ── Test audio generation ────────────────────────────────────────────
-
-    /// <summary>
-    /// Generates speech-like audio for testing.
-    /// SALSA analyzes amplitude, so this creates vowel-like syllables
-    /// with varying volume to trigger viseme transitions.
-    /// </summary>
     private AudioClip GenerateTestAudio(float duration)
     {
         int sampleRate = 44100;
@@ -325,38 +252,28 @@ public class SalsaAvatarController : MonoBehaviour
         for (int i = 0; i < samples; i++)
         {
             float t = i / (float)sampleRate;
-
-            // Syllable rhythm — creates speech-like amplitude variation
             float syllable = Mathf.Pow(Mathf.Max(0f, Mathf.Sin(t * 3.5f * Mathf.PI)), 0.5f);
             float wordGap = Mathf.Sin(t * 0.8f * Mathf.PI) > -0.3f ? 1f : 0f;
             float envelope = syllable * wordGap * 0.6f;
-
-            // Fundamental frequency (voice pitch)
             float f0 = 150f + 20f * Mathf.Sin(t * 2f);
             float voice = 0f;
             for (int h = 1; h <= 5; h++)
                 voice += Mathf.Sin(2f * Mathf.PI * f0 * h * t) / (h * h);
-
             data[i] = voice * 0.3f * envelope;
         }
 
-        // Normalize to 0.6 peak (moderate volume for SALSA)
         float maxAmp = 0f;
-        for (int i = 0; i < samples; i++)
-            maxAmp = Mathf.Max(maxAmp, Mathf.Abs(data[i]));
+        for (int i = 0; i < samples; i++) maxAmp = Mathf.Max(maxAmp, Mathf.Abs(data[i]));
         if (maxAmp > 0f)
         {
             float scale = 0.6f / maxAmp;
-            for (int i = 0; i < samples; i++)
-                data[i] *= scale;
+            for (int i = 0; i < samples; i++) data[i] *= scale;
         }
 
         var clip = AudioClip.Create("SALSATest", samples, 1, sampleRate, false);
         clip.SetData(data, 0);
         return clip;
     }
-
-    // ── Send to React Native ─────────────────────────────────────────────
 
     public void SendToReactNative(string type, string payload)
     {
@@ -373,16 +290,11 @@ public class SalsaAvatarController : MonoBehaviour
                 javaClass.CallStatic("sendMessageToMobileApp", json);
             }
         }
-        catch (Exception e)
-        {
-            Debug.LogWarning($"[SalsaAvatarController] Android bridge: {e.Message}");
-        }
+        catch (Exception e) { Debug.LogWarning($"[SalsaAvatarController] Android bridge: {e.Message}"); }
 #else
         Debug.Log($"[SalsaAvatarController] → RN: {json}");
 #endif
     }
-
-    // ── Data classes ─────────────────────────────────────────────────────
 
     [Serializable]
     public class BridgeMessage

@@ -201,7 +201,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4264151, g: 0.4264151, b: 0.4264151, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1037,28 +1037,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5454969043312423159, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
   m_PrefabInstance: {fileID: 2024708948}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &807176311 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-  m_PrefabInstance: {fileID: 5514656999263904158}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1091098677, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.Salsa
---- !u!114 &807176312 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3489050003690043192, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-  m_PrefabInstance: {fileID: 5514656999263904158}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1489447753, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.Emoter
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,22 +1835,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8721056732114653340, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
   m_PrefabInstance: {fileID: 2024708948}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1316645592 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-  m_PrefabInstance: {fileID: 5514656999263904158}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1316645595 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3018187844800073632, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-  m_PrefabInstance: {fileID: 5514656999263904158}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 974247159, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.Eyes
 --- !u!1 &1335383619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1861,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335383619}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4223f5426d994c9e8cab2fcaa652448, type: 3}
   m_Name: 
@@ -1913,16 +1875,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335383619}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d19473464789b437fb39f5892b9564d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SalsaAvatarController
-  avatarRoot: {fileID: 1316645592}
-  salsa: {fileID: 807176311}
-  eyes: {fileID: 1316645595}
-  emoter: {fileID: 807176312}
-  avatarAnimations: {fileID: 0}
+  avatarRoot: {fileID: 0}
+  salsa: {fileID: 1510886360}
+  eyes: {fileID: 0}
+  emoter: {fileID: 1510886361}
+  animator: {fileID: 1510886358}
 --- !u!4 &1335383622
 Transform:
   m_ObjectHideFlags: 0
@@ -1945,7 +1907,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335383619}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa229726a735e9143ad6be263eaceaa0, type: 3}
   m_Name: 
@@ -2196,6 +2158,11 @@ MonoBehaviour:
   - {fileID: 1297050037}
   - {fileID: 1698168330}
   - {fileID: 55548473}
+--- !u!95 &1510886358 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
+  m_PrefabInstance: {fileID: 2024708948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1510886360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2316,7 +2283,7 @@ MonoBehaviour:
       inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
-    trigger: 0.15
+    trigger: 0
   - expData:
       name: AA
       components:
@@ -2447,10 +2414,10 @@ MonoBehaviour:
         textures: []
         materialRenderer: {fileID: 0}
         materials: []
-      inspFoldout: 1
+      inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
-    trigger: 0.2
+    trigger: 0.02777778
   - expData:
       name: u
       components:
@@ -2518,10 +2485,10 @@ MonoBehaviour:
         textures: []
         materialRenderer: {fileID: 0}
         materials: []
-      inspFoldout: 1
+      inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
-    trigger: 0.28
+    trigger: 0.11111112
   - expData:
       name: .35
       components:
@@ -2652,18 +2619,160 @@ MonoBehaviour:
         textures: []
         materialRenderer: {fileID: 0}
         materials: []
-      inspFoldout: 1
+      inspFoldout: 0
       previewDisplayMode: 0
       collectionExpand: 0
-    trigger: 0.5
+    trigger: 0.25
+  - expData:
+      name: ss
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 1270099321}
+        baseTform:
+          pos: {x: -0, y: 0, z: 0}
+          rot: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+          scale: {x: 100, y: 100, z: 100}
+        startTform:
+          pos: {x: -0, y: 0, z: 0}
+          rot: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+          scale: {x: 100, y: 100, z: 100}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 1}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 1
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 1466085717}
+        blendIndex: 8
+        minShape: 0
+        maxShape: 1
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.44444448
+  - expData:
+      name: pp
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 1270099321}
+        baseTform:
+          pos: {x: -0, y: 0, z: 0}
+          rot: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+          scale: {x: 100, y: 100, z: 100}
+        startTform:
+          pos: {x: -0, y: 0, z: 0}
+          rot: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+          scale: {x: 100, y: 100, z: 100}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 1}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 1
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 1466085717}
+        blendIndex: 2
+        minShape: 0
+        maxShape: 0.6
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.6944444
   configReady: 1
   configNotReadyNotified: 0
   warnOnNullRefs: 1
   isDebug: 0
   useAudioAnalysis: 1
   needAudioSource: 1
-  inspStateFoldoutProcessing: 1
-  inspStateFoldoutSettings: 1
+  inspStateFoldoutProcessing: 0
+  inspStateFoldoutSettings: 0
   inspStateFoldoutVisemes: 1
   inspCollectionDisplayMode: 0
   inspAnalysisDisplay: 0
@@ -2823,8 +2932,8 @@ MonoBehaviour:
       inspFoldout: 1
       previewDisplayMode: 0
       collectionExpand: 0
-    isRandomEmote: 0
-    isLipsyncEmphasisEmote: 1
+    isRandomEmote: 1
+    isLipsyncEmphasisEmote: 0
     isRepeaterEmote: 0
     repeaterDelay: 0
     startDelay: 0
@@ -4311,6 +4420,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[3]'
       value: 0
       objectReference: {fileID: 0}
@@ -4320,6 +4437,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[8]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[9]'
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
@@ -4340,6 +4461,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
       propertyPath: 'm_BlendShapeWeights.Array.data[15]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[16]'
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5510251110207249535, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
@@ -4464,131 +4589,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4237776227220690294, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
   m_PrefabInstance: {fileID: 2024708948}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &5514656999263904158
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 546338810473288328, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[11]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 2015395189148661451, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3489050003690043192, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: inspSalsaLinked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3489050003690043192, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: inspStateFoldoutSettings
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: inspStateFoldoutVisemes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: inspCollectionDisplayMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: visemes.Array.data[0].expData.inspFoldout
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: visemes.Array.data[1].expData.inspFoldout
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: visemes.Array.data[4].expData.inspFoldout
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: visemes.Array.data[5].expData.inspFoldout
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: visemes.Array.data[7].expData.inspFoldout
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: visemes.Array.data[8].expData.inspFoldout
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: visemes.Array.data[4].expData.previewDisplayMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741755254363010263, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: visemes.Array.data[0].expData.controllerVars.Array.data[0].maxShape
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5575506156949225678, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[11]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7203759146335311664, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
-    - target: {fileID: 7203759146335311664, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9d289a3182663da45b725efae13ba428, type: 2}
-    - target: {fileID: 7340874970174881745, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_Name
-      value: brunette
-      objectReference: {fileID: 0}
-    - target: {fileID: 7340874970174881745, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dc584f446e2c3cc4ab7ba504582d3ae2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4597,7 +4597,6 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 371032195}
-  - {fileID: 5514656999263904158}
   - {fileID: 1335383622}
   - {fileID: 1955365776}
   - {fileID: 2024708948}
