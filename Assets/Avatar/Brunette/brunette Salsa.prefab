@@ -1,0 +1,3266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5977071041304550017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5912616281286784488}
+  - component: {fileID: 3994412126187600788}
+  m_Layer: 0
+  m_Name: eye 0_Gizmo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5912616281286784488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977071041304550017}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000001862645, y: 2.131628e-14, z: -2.335909e-13, w: 1}
+  m_LocalPosition: {x: -1.190571e-13, y: 0.00000013632426, z: -0.0000000134882665}
+  m_LocalScale: {x: 0.19999999, y: 0.20000002, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8553963758670666359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3994412126187600788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977071041304550017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1382872388, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.EyeGizmo
+  inspStateFoldoutSettings: 1
+  showGizmo: 1
+--- !u!1 &7454778318839295249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 762831672060687744}
+  - component: {fileID: 8549360208468643248}
+  m_Layer: 0
+  m_Name: eye 1_Gizmo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &762831672060687744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454778318839295249}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000001862645, y: 2.131628e-14, z: -2.335909e-13, w: 1}
+  m_LocalPosition: {x: -1.190571e-13, y: 0.00000013632426, z: -0.0000000134882665}
+  m_LocalScale: {x: 0.19999999, y: 0.20000002, z: 0.20000002}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8553963758670666359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8549360208468643248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454778318839295249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1382872388, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.EyeGizmo
+  inspStateFoldoutSettings: 1
+  showGizmo: 1
+--- !u!1001 &4176286826564275247
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.51
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3831998457146517567, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00019144137
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09635141
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00015415205
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99990064
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.014092395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000015630278
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00037943624
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.615
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.044
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[4]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[5]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[6]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[7]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[8]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[9]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[10]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[11]'
+      value: 1.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[12]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[13]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[14]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[15]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[16]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[17]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_Name
+      value: brunette
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.09535265
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.019517042
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0027034478
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.033907898
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0019135189
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.056059748
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.99784964
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 6.431
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -176.108
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09555952
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.019661322
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0026997058
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.033150103
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0019323562
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.056058686
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.99787515
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 6.431
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 176.195
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[1]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[2]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[4]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[5]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[6]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[7]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[8]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[9]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[10]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[11]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[12]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[13]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[14]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[15]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[22]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[23]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      propertyPath: 'm_BlendShapeWeights.Array.data[32]'
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -3512545981279201704, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5912616281286784488}
+    - targetCorrespondingSourceObject: {fileID: -3512545981279201704, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 762831672060687744}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3741755254363010263}
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3489050003690043192}
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4729922407540064049}
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8705789811318712672}
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3018187844800073632}
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7203759146335311664}
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8906556979509361278}
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7139463806545822660}
+  m_SourcePrefab: {fileID: -4161369568681901532, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+--- !u!4 &168111412117852376 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4926824958996734729, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &183839049314388096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4938190283616877393, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &198140637005307170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4272448618818212109, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &199885769708757038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4265759532009171969, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &291522914784910163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4756201196637268100, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &504783958272745516 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4686983976300549117, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &546338810473288328 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4495114683468275367, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &602166285591923813 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3579928179255377994, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &895384213309784287 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3861886774189182192, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1022936852332530192 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4019204386741683775, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1105606868995720626 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3936921414807390621, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1141120662923638556 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3901020592793074483, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1400266594386556790 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3070216559101246297, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1644118683888241851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5826475365140529004, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1810897915714227051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2365723179770808132, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1846142864947208240 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2336233074335755295, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1900564397461786787 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2563972614397041804, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1934389912094750722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2534809561089471533, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2015395189148661451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6769691430286951708, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2050281926725032097 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6520871200261368690, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2090341041731292149 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2663673192325941210, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2137114136401712388 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6602933161096554197, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2389511508193400993 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1791419673205707918, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2419601861743505792 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7466684855223730769, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2458681657885883711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7211429254082350832, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2554784260583296613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7313480747857067446, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2598737305302024505 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7069042337374761706, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3031244116501345137 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1433273653890383710, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3095250305989762630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7853803324104928663, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3726224027590648424 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8483915560507068857, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3775913868675846974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 978296060804128529, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3862587342492837259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8327283233037915740, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3946001351163028119 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8127266766519177544, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4060955867650220741 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -9102250499874902294, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4183927209948134245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 280750521534216010, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4260321034233189213 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 210145076752015218, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &4326324340905661182 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -8791281915348967727, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4374466529230618959 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8845038210521150112, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4504480407434593693 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 537625647264647602, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4617965801240363673 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -440391995566567754, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4649825388612536089 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -472216931276551370, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4677514592122723214 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -496249176700512351, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4751957450211640774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8649020845083265513, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5425140846632333046 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8267727549144670937, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5463040621729054274 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8225182869449978477, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5575506156949225678 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8400633817671896289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5684830582643489683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8579838835284522940, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5966381348678913545 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7726486480146924070, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5992412960407572602 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7700158567282351189, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6096176000420460601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7884907377736250390, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6153654796183346796 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1399763158140005821, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6356780637616697151 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7044462089623610128, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6468331633967686204 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6931329978903637523, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6588841174274908314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7099188820035136693, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6776653410494388793 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7493608122908726806, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6783614014907078422 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1742581084226053319, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6815934698061861450 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7449576945638792805, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7106745980246774908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2642173251521177517, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7220599561001076109 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2467515513781204574, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7315866472097302181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2561972634505114998, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7340874970174881745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6635245195314443262, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3741755254363010263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340874970174881745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1091098677, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.Salsa
+  audioSrc: {fileID: 8705789811318712672}
+  waitForAudioSource: 0
+  useExternalAnalysis: 0
+  audioSourceWaitTarget: {fileID: 0}
+  queueProcessor: {fileID: 4729922407540064049}
+  emoter: {fileID: 3489050003690043192}
+  emphasizerTrigger: 0.145
+  analysisValue: 0
+  sampleSize: 512
+  audioUpdateDelay: 0.08
+  playheadBias: 2800
+  autoAdjustAnalysis: 1
+  autoAdjustMicrophone: 0
+  microphoneRecordHeadPointer: 0
+  scaleExternalAnalysis: 0
+  silencePulseThreshold: 3
+  loCutoff: 0.03
+  hiCutoff: 0.75
+  useAdvDyn: 1
+  advDynPrimaryBias: 0.65
+  useAdvDynJitter: 0
+  advDynJitterAmount: 0.25
+  advDynJitterProb: 0.25
+  useAdvDynSecondaryMix: 0
+  advDynSecondaryMix: 0
+  useAdvDynRollback: 0
+  advDynRollback: 0.3
+  globalFrac: 1
+  usePersistence: 0
+  useTimingsOverride: 0
+  globalDurON: 0.08
+  globalDurOFF: 0.06
+  globalDurOffBalance: 0
+  originalUpdateDelay: 0
+  globalNuanceBalance: 0
+  useEasingOverride: 0
+  globalEasing: 4
+  visemes:
+  - expData:
+      name: FF
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 3
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0
+  - expData:
+      name: th
+      components:
+      - name: TH
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 4
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.010000001
+  - expData:
+      name: DD
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 5
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.040000003
+  - expData:
+      name: PP
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 2
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.09
+  - expData:
+      name: aa
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: component 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 11
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 546338810473288328}
+        blendIndex: 11
+        minShape: 0
+        maxShape: 0.0128999995
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 1
+      previewDisplayMode: 1
+      collectionExpand: 0
+    trigger: 0.16000001
+  - expData:
+      name: ss
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: component 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 8
+        minShape: 0
+        maxShape: 0.015
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 546338810473288328}
+        blendIndex: 8
+        minShape: 0
+        maxShape: 0.015
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.25
+  - expData:
+      name: E
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: component 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 12
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 546338810473288328}
+        blendIndex: 12
+        minShape: 0
+        maxShape: 0.006
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.36
+  - expData:
+      name: I
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 13
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.48999998
+  - expData:
+      name: O
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: component 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 14
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 546338810473288328}
+        blendIndex: 14
+        minShape: 0
+        maxShape: 0.021300001
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.64000005
+  - expData:
+      name: U
+      components:
+      - name: component 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.08
+        durationHold: 0
+        durationOff: 0.06
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 0
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 15
+        minShape: 0
+        maxShape: 0.015
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    trigger: 0.80999994
+  configReady: 1
+  configNotReadyNotified: 0
+  warnOnNullRefs: 1
+  isDebug: 0
+  useAudioAnalysis: 1
+  needAudioSource: 1
+  inspStateFoldoutProcessing: 1
+  inspStateFoldoutSettings: 0
+  inspStateFoldoutVisemes: 1
+  inspCollectionDisplayMode: 0
+  inspAnalysisDisplay: 0
+  inspOverrideSecondaryMix: 0
+  inspDetailedTimingAdjustments: 0
+  doEditorConfigPreview: 0
+  inspGoOriginalName: 
+--- !u!114 &3489050003690043192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340874970174881745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1489447753, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.Emoter
+  emoterName: Emoter
+  queueProcessor: {fileID: 4729922407540064049}
+  lipsyncEmphasisChance: 1
+  lipsyncEmphasisEmotes: []
+  repeaterEmotes: []
+  randomEmotes: []
+  emotes:
+  - expData:
+      name: Eyes squinting
+      components:
+      - name: l
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.5
+        durationHold: 0.5
+        durationOff: 0.5
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 1
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      - name: r
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.5
+        durationHold: 0.5
+        durationOff: 0.5
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 1
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 22
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 23
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 1
+      previewDisplayMode: 0
+      collectionExpand: 0
+    isRandomEmote: 0
+    isLipsyncEmphasisEmote: 1
+    isRepeaterEmote: 0
+    repeaterDelay: 0
+    startDelay: 0
+    isPersistent: 0
+    isHoldVariationExempt: 0
+    isAlwaysEmphasisEmote: 0
+    hasBeenFired: 0
+    frac: 1
+  useRandomEmotes: 0
+  isChancePerEmote: 1
+  numRandomEmotesPerCycle: 0
+  numRandomEmphasizersPerCycle: 1
+  randomEmoteMinTimer: 1
+  randomEmoteMaxTimer: 2
+  randomChance: 0.5
+  useRandomFrac: 0
+  randomFracBias: 0.5
+  useRandomHoldDuration: 0
+  randomHoldDurationMin: 0.1
+  randomHoldDurationMax: 0.5
+  configReady: 1
+  warnOnNullRefs: 1
+  inspSalsaLinked: 0
+  inspStateFoldoutProcessing: 0
+  inspStateFoldoutSettings: 1
+  inspStateFoldoutEmotes: 1
+  inspCollectionDisplayMode: 0
+--- !u!114 &4729922407540064049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340874970174881745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2069102741, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.QueueProcessor
+  useMergeWithInfluencer: 1
+  ignoreScaledTime: 0
+  inspHeight: 150
+  inspShowHeads: 1
+  inspShowEmote: 1
+  inspShowEyes: 1
+  inspShowLids: 1
+  inspShowLipsync: 1
+  inspShowBlinks: 1
+--- !u!82 &8705789811318712672
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340874970174881745}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: b3412a60cacef194b95ee2e3e5bd2542, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &3018187844800073632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340874970174881745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 974247159, guid: 21fe281538940584e84b6d5eedb3525e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SALSA-LipSync.dll::CrazyMinnow.SALSA.Eyes
+  inspStateFoldoutReferences: 0
+  inspStateFoldoutHeads: 1
+  inspStateFoldoutHeadProps: 0
+  inspStateFoldoutAnimBones: 0
+  inspStateFoldoutEyes: 1
+  inspStateFoldoutEyeProps: 1
+  inspStateFoldoutEyelids: 0
+  inspStateFoldoutEyelidBlinkProps: 0
+  inspStateFoldoutEyelidTrackProps: 0
+  drawEyeBoneCaptureControls: 0
+  drawBlinkBoneCaptureControls: 0
+  drawTrackBoneCaputreControls: 0
+  headIsRoot: 0
+  configReadyHead: 1
+  configReadyEye: 1
+  configReadyBlink: 1
+  configReadyTrack: 1
+  characterRoot: {fileID: 2015395189148661451}
+  queueProcessor: {fileID: 4729922407540064049}
+  lookTarget: {fileID: 0}
+  useAffinity: 0
+  affinityPercentage: 0.75
+  hasAffinity: 1
+  affinityTimerRange: {x: 2, y: 5}
+  updateDelay: 0.07
+  useSpriteFlipping: 0
+  flipType: 0
+  flipScale: {fileID: 0}
+  flipSprite: {fileID: 0}
+  parentRandTargets: 0
+  showSceneGizmos: 1
+  warnOnNullRefs: 1
+  flipState: 0
+  animCancel: []
+  headEnabled: 1
+  headTemplate: 1
+  head2DProcessing: 0
+  headTargetOffset: {x: 0, y: 0, z: 0}
+  headClamp: {x: 70, y: 140, z: 45}
+  headFacingCamera: 0
+  headRandom: 1
+  headRandomFov: {x: 5, y: 45, z: 22.5}
+  headRandFovHalf: {x: 0, y: 0, z: 0}
+  headRandTimerRange: {x: 5, y: 10}
+  headRandTimer: 0
+  headUseDistExtents: 0
+  headRandDistRange: {x: 1, y: 1}
+  updateHeadFwdCenterRefs: 1
+  headTargetRadius: 0.01
+  headBones: []
+  headRefsFwd: []
+  headRefsFix: []
+  headRefCenter: {fileID: 0}
+  newHeadDirs: []
+  headTarget: {fileID: 0}
+  headTarget2D: {x: 0, y: 0, z: 0}
+  heads:
+  - expData:
+      name: head 0
+      components:
+      - name: head 0
+        controlType: 1
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 1
+        durationDelay: 0
+        durationOn: 0.75
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 2
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 0
+      controllerVars:
+      - bone: {fileID: 8553963758670666359}
+        baseTform:
+          pos: {x: 1.563194e-13, y: 0.09079506, z: 0.000000016763806}
+          rot: {x: -0.05336157, y: -0.000000049207223, z: -0.00000012379729, w: 0.99857527}
+          scale: {x: 1, y: 1, z: 1}
+        startTform:
+          pos: {x: 1.563194e-13, y: 0.09079506, z: 0.000000016763806}
+          rot: {x: -0.05336157, y: -0.000000049207223, z: -0.00000012379729, w: 0.99857527}
+          scale: {x: 1, y: 1, z: 1}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 1}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 0
+        fracRot: 1
+        fracScl: 1
+        inspIsSetStart: 1
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 0}
+        blendIndex: 0
+        minShape: 0
+        maxShape: 1
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 1
+      previewDisplayMode: 0
+      collectionExpand: 0
+    gizmo: {fileID: 0}
+    referenceIdx: 0
+  headTarget2DDot: 0
+  eyeEnabled: 0
+  eyeTemplate: 3
+  sectorCount: 3
+  prevSectorCount: 0
+  eyeControlType: 0
+  forwardSectorRadius: 1
+  eye2DProcessing: 0
+  eye2DDepth: 1
+  eyePosPercentX: 0
+  eyePosPercentY: 0
+  useEyeShapes: 1
+  useEyeSectors: 0
+  eyeClamp: {x: 25, y: 45, z: 0}
+  eyeRandom: 1
+  eyeRandomFov: {x: 2.5, y: 5, z: 10}
+  eyeRandTrackFov: {x: 0.1, y: 0.05}
+  eyeRandTrackFovAffinity: {x: 0.2, y: 0.1}
+  eyeRandTimerRange: {x: 0.25, y: 1}
+  eyeRandTimer: 0
+  eyeUseDistExtents: 0
+  eyeRandDistRange: {x: 1, y: 1}
+  eyeTargetRadius: 0.01
+  eyeBones: []
+  eyeRefsFwd: []
+  eyeRefsFix: []
+  eyeRefCenter: {fileID: 0}
+  newEyeDirs: []
+  eyeTarget: {fileID: 0}
+  eyeTarget2D: {x: 0, y: 0, z: 0}
+  eyes:
+  - expData:
+      name: eye 0
+      components:
+      - name: eye 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 3
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 2
+      - name: eye 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 3
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 6
+      - name: eye 2
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 3
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 8
+      - name: eye 3
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 3
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 4
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 42
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 44
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 40
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 46
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    gizmo: {fileID: 3994412126187600788}
+    referenceIdx: 0
+  - expData:
+      name: eye 1
+      components:
+      - name: eye 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 3
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 2
+      - name: eye 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 3
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 6
+      - name: eye 2
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 3
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 8
+      - name: eye 3
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0
+        isSmoothDisable: 0
+        isPersistent: 1
+        expressionType: 3
+        easing: 4
+        expressionHandler: 0
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 4
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 4326324340905661182}
+        blendIndex: 43
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 4326324340905661182}
+        blendIndex: 45
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 4326324340905661182}
+        blendIndex: 41
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 4326324340905661182}
+        blendIndex: 47
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    gizmo: {fileID: 8549360208468643248}
+    referenceIdx: 0
+  eyeExpIndex: 1
+  eyeExpNames:
+  - eye 0
+  - eye 1
+  eyeExpRend: {fileID: 5575506156949225678}
+  eyeExpRendItemCount: 2
+  eyeExpRendIsNullOrSmr: 1
+  blinkEnabled: 1
+  eyelidTemplate: 3
+  eyelidSelection: 0
+  eyelidControlType: 0
+  eyelid2DProcessing: 0
+  blinkOn: 0
+  blinkHold: 0
+  blinkOff: 0
+  blinkRandom: 1
+  blinkRandTimerRange: {x: 0.5, y: 5}
+  blinkRandTimer: 0
+  eyelidPercentEyes: 0.5
+  trackPercent: 0
+  blinklids:
+  - expData:
+      name: eyelid 0
+      components:
+      - name: eyelid 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0.1
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 4
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 2
+      - name: eyelid 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0.1
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 4
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 8
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 67
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 68
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    gizmo: {fileID: 0}
+    referenceIdx: 0
+  - expData:
+      name: eyelid 1
+      components:
+      - name: eyelid 0
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0.1
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 4
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 2
+      - name: eyelid 1
+        controlType: 0
+        lipsyncControlType: 0
+        emoteControlType: 0
+        eyesControlType: 0
+        durationDelay: 0
+        durationOn: 0.1
+        durationHold: 0
+        durationOff: 0.1
+        isSmoothDisable: 0
+        isPersistent: 0
+        expressionType: 4
+        easing: 4
+        expressionHandler: 1
+        isAnimatorControlled: 0
+        useOffset: 0
+        useOffsetFollow: 1
+        inspFoldout: 1
+        enabled: 1
+        isBonePreviewUpdated: 0
+        frac: 1
+        directionType: 8
+      controllerVars:
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 67
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      - bone: {fileID: 0}
+        baseTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        startTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        endTform:
+          pos: {x: 0, y: 0, z: 0}
+          rot: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+        fracPos: 1
+        fracRot: 0
+        fracScl: 0
+        inspIsSetStart: 0
+        inspIsSetEnd: 0
+        umaUepProxy: {fileID: 0}
+        uepAmount: 0
+        smr: {fileID: 5575506156949225678}
+        blendIndex: 68
+        minShape: 0
+        maxShape: 0.01
+        eyeGizmo: {fileID: 0}
+        eventSender: {fileID: 0}
+        animator: {fileID: 0}
+        isTriggerParameterBiDirectional: 0
+        eventIdentityName: 
+        onState: 2
+        display2dImage: 0
+        isRestNull: 0
+        spriteRenderer: {fileID: 0}
+        sprites: []
+        uguiRenderer: {fileID: 0}
+        textureRenderer: {fileID: 0}
+        materialIndex: 0
+        backupTextures: []
+        textures: []
+        materialRenderer: {fileID: 0}
+        materials: []
+      inspFoldout: 0
+      previewDisplayMode: 0
+      collectionExpand: 0
+    gizmo: {fileID: 0}
+    referenceIdx: 0
+  eyelidExpIndex: 1
+  eyelidExpNames:
+  - eyelid 0
+  - eyelid 1
+  eyelidExpRend: {fileID: 0}
+  eyelidExpRendItemCount: 1
+  eyelidExpRendIsNullOrSmr: 1
+  trackEnabled: 1
+  trackBones: []
+  tracklids: []
+--- !u!95 &7203759146335311664
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340874970174881745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: fbb119aee8cf1c14f89e4c0e3da0b053, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8906556979509361278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340874970174881745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.BoneRenderer
+  boneShape: 1
+  drawBones: 1
+  drawTripods: 0
+  boneSize: 1
+  tripodSize: 1
+  boneColor: {r: 0, g: 0, b: 1, a: 0.5}
+  m_Transforms:
+  - {fileID: 198140637005307170}
+  - {fileID: 5684830582643489683}
+  - {fileID: 3726224027590648424}
+  - {fileID: 504783958272745516}
+  - {fileID: 8553963758670666359}
+  - {fileID: 2458681657885883711}
+  - {fileID: 1400266594386556790}
+  - {fileID: 7220599561001076109}
+  - {fileID: 5912616281286784488}
+  - {fileID: 762831672060687744}
+  - {fileID: 5992412960407572602}
+  - {fileID: 199885769708757038}
+  - {fileID: 6468331633967686204}
+  - {fileID: 6096176000420460601}
+  - {fileID: 3946001351163028119}
+  - {fileID: 5966381348678913545}
+  - {fileID: 1141120662923638556}
+  - {fileID: 1934389912094750722}
+  - {fileID: 7849725907415493582}
+  - {fileID: 1900564397461786787}
+  - {fileID: 3095250305989762630}
+  - {fileID: 4060955867650220741}
+  - {fileID: 1846142864947208240}
+  - {fileID: 1810897915714227051}
+  - {fileID: 6356780637616697151}
+  - {fileID: 8439247469851178832}
+  - {fileID: 5425140846632333046}
+  - {fileID: 6588841174274908314}
+  - {fileID: 7315866472097302181}
+  - {fileID: 3031244116501345137}
+  - {fileID: 2389511508193400993}
+  - {fileID: 8538632537182803036}
+  - {fileID: 6776653410494388793}
+  - {fileID: 2419601861743505792}
+  - {fileID: 168111412117852376}
+  - {fileID: 4183927209948134245}
+  - {fileID: 1644118683888241851}
+  - {fileID: 4649825388612536089}
+  - {fileID: 8047917857860708482}
+  - {fileID: 2050281926725032097}
+  - {fileID: 1105606868995720626}
+  - {fileID: 8712946411571989009}
+  - {fileID: 7892077343523510588}
+  - {fileID: 4260321034233189213}
+  - {fileID: 4617965801240363673}
+  - {fileID: 7106745980246774908}
+  - {fileID: 2090341041731292149}
+  - {fileID: 291522914784910163}
+  - {fileID: 4751957450211640774}
+  - {fileID: 183839049314388096}
+  - {fileID: 6783614014907078422}
+  - {fileID: 7933171862826712209}
+  - {fileID: 9140475919041880438}
+  - {fileID: 3775913868675846974}
+  - {fileID: 2598737305302024505}
+  - {fileID: 1022936852332530192}
+  - {fileID: 2554784260583296613}
+  - {fileID: 4374466529230618959}
+  - {fileID: 5463040621729054274}
+  - {fileID: 4504480407434593693}
+  - {fileID: 895384213309784287}
+  - {fileID: 602166285591923813}
+  - {fileID: 7748356555959175138}
+  - {fileID: 6815934698061861450}
+  - {fileID: 4677514592122723214}
+  - {fileID: 3862587342492837259}
+  - {fileID: 2137114136401712388}
+  - {fileID: 6153654796183346796}
+--- !u!114 &7139463806545822660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340874970174881745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3a963ab64ec4611ba8c47c82632081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AvatarAnimations
+--- !u!4 &7748356555959175138 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3282394594762437683, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7849725907415493582 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6132480622065592289, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7892077343523510588 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3138045517890497261, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7933171862826712209 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2887529212532936514, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8047917857860708482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6222519047642064045, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8439247469851178832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3680817064461321345, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8538632537182803036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3491846961531824013, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8553963758670666359 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3512545981279201704, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8712946411571989009 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4692676202924770878, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9140475919041880438 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5128571753441865049, guid: 9036568e4f80b45698f98bd3d76509ac, type: 3}
+  m_PrefabInstance: {fileID: 4176286826564275247}
+  m_PrefabAsset: {fileID: 0}
