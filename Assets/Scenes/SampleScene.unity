@@ -1853,7 +1853,6 @@ GameObject:
   - component: {fileID: 1335383620}
   - component: {fileID: 1335383623}
   - component: {fileID: 1335383624}
-  - component: {fileID: 1335383625}
   m_Layer: 0
   m_Name: SalsaAvatarController
   m_TagString: Untagged
@@ -1930,7 +1929,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335383619}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62647a2ad41311d4e99fe40f0d6c9a7a, type: 3}
   m_Name: 
@@ -1938,20 +1937,6 @@ MonoBehaviour:
   testClip: {fileID: 8300000, guid: 37e8ca841bce8a94a899792569252b2e, type: 3}
   audioSource: {fileID: 1733319914}
   controller: {fileID: 0}
---- !u!114 &1335383625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335383619}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e58d0c6e1f286e44b4e77a0e174f486, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SalsaULipSyncBridge
-  salsa: {fileID: 1955365778}
-  weightMultiplier: 1
 --- !u!4 &1351011411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -598899602719803449, guid: 12789a8cf07a87d46a778b77a519f782, type: 3}
@@ -3868,9 +3853,9 @@ MonoBehaviour:
   microphoneRecordHeadPointer: 0
   scaleExternalAnalysis: 0
   silencePulseThreshold: 3
-  loCutoff: 0.08065016
+  loCutoff: 0.14504643
   hiCutoff: 0.75
-  useAdvDyn: 0
+  useAdvDyn: 1
   advDynPrimaryBias: 0.5
   useAdvDynJitter: 0
   advDynJitterAmount: 0.25
@@ -5386,7 +5371,7 @@ MonoBehaviour:
   useAudioAnalysis: 1
   needAudioSource: 1
   inspStateFoldoutProcessing: 0
-  inspStateFoldoutSettings: 0
+  inspStateFoldoutSettings: 1
   inspStateFoldoutVisemes: 0
   inspCollectionDisplayMode: 0
   inspAnalysisDisplay: 0
@@ -5427,7 +5412,7 @@ MonoBehaviour:
   randomHoldDurationMax: 0.5
   configReady: 0
   warnOnNullRefs: 1
-  inspSalsaLinked: 0
+  inspSalsaLinked: 1
   inspStateFoldoutProcessing: 0
   inspStateFoldoutSettings: 0
   inspStateFoldoutEmotes: 0
@@ -5703,7 +5688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00252046faaef0647a0a240490d3d467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::uLipSync_Salsa_Bridge
-  silenceThreshold: 0.01
 --- !u!1001 &2024708948
 PrefabInstance:
   m_ObjectHideFlags: 0

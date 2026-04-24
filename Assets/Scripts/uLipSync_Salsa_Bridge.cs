@@ -7,9 +7,6 @@ public class uLipSync_Salsa_Bridge : MonoBehaviour
 {
     private Salsa salsa;
 
-    [Header("Settings")][Tooltip("Minimum volume needed to trigger a mouth shape. Otherwise, goes to silence.")]
-    public float silenceThreshold = 0.01f;
-
     // Variables we will feed into SALSA
     private int currentTargetVisemeIndex = -1;
     private float currentAnalysisValue = 0f;
@@ -31,19 +28,26 @@ public class uLipSync_Salsa_Bridge : MonoBehaviour
     // --- STEP 4: Link this to uLipSync's Event ---
     public void OnLipSyncUpdate(LipSyncInfo info)
     {
-        currentTargetVisemeIndex = -1; // Default to silence (-1)
+        currentTargetVisemeIndex = -1; // Default to silence
 
-        // If the character is speaking loud enough
-        if (info.volume > silenceThreshold)
+        // --- THE SALSA NOISE FILTER ---
+        // uLipSync gives us a very low RMS volume. We multiply by a factor (e.g., 5-10) to make it 
+        // roughly equivalent to SALSA's 0 to 1 amplitude scale.
+        float rawVolumeScaled = info.volume * 5f; 
+
+        // Apply SALSA's math exactly as written in their decompiled code:
+        // Mathf.Clamp01((audioValue - loCutoff) / (hiCutoff - loCutoff))
+        float salsaFilteredVolume = Mathf.Clamp01((rawVolumeScaled - salsa.loCutoff) / (salsa.hiCutoff - salsa.loCutoff));
+
+        // If the filtered volume survives the low-cutoff threshold (meaning it's actual speech, not noise)
+        if (salsaFilteredVolume > 0f)
         {
-            // 'info.phoneme' automatically holds the name of the winning sound (e.g., "E", "aa")
             currentTargetVisemeIndex = FindSalsaVisemeIndexByName(info.phoneme);
-            
-            // Pass the volume to SALSA so its "EmoteR" still triggers on loud words
-            currentAnalysisValue = info.volume * 5f; 
+            currentAnalysisValue = salsaFilteredVolume; // Feed the filtered clean volume to SALSA
         }
         else
         {
+            // It was just noise (below the loCutoff slider), so stay silent
             currentAnalysisValue = 0f;
         }
     }
@@ -64,7 +68,6 @@ public class uLipSync_Salsa_Bridge : MonoBehaviour
     {
         if (string.IsNullOrEmpty(phonemeName)) return -1;
 
-        // Loop through SALSA's configured visemes
         for (int i = 0; i < salsa.visemes.Count; i++)
         {
             if (salsa.visemes[i].expData.name == phonemeName)
@@ -72,6 +75,6 @@ public class uLipSync_Salsa_Bridge : MonoBehaviour
                 return i;
             }
         }
-        return -1; // Return -1 (Silence) if no match is found
+        return -1; 
     }
 }
