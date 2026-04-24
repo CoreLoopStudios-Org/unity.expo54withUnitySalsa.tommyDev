@@ -1930,7 +1930,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335383619}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62647a2ad41311d4e99fe40f0d6c9a7a, type: 3}
   m_Name: 
@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335383619}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e58d0c6e1f286e44b4e77a0e174f486, type: 3}
   m_Name: 
@@ -3086,8 +3086,8 @@ MonoBehaviour:
   onLipSyncUpdate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1335383625}
-        m_TargetAssemblyTypeName: SalsaULipSyncBridge, Assembly-CSharp
+      - m_Target: {fileID: 1955365785}
+        m_TargetAssemblyTypeName: uLipSync_Salsa_Bridge, Assembly-CSharp
         m_MethodName: OnLipSyncUpdate
         m_Mode: 0
         m_Arguments:
@@ -3831,6 +3831,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e46c1a66dbf1a9447803b1abbb131446, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1955365784}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e46c1a66dbf1a9447803b1abbb131446, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1955365785}
   m_SourcePrefab: {fileID: 100100000, guid: e46c1a66dbf1a9447803b1abbb131446, type: 3}
 --- !u!1 &1955365777 stripped
 GameObject:
@@ -3907,7 +3910,7 @@ MonoBehaviour:
         isAnimatorControlled: 0
         useOffset: 0
         useOffsetFollow: 1
-        inspFoldout: 0
+        inspFoldout: 1
         enabled: 1
         isBonePreviewUpdated: 0
         frac: 1
@@ -4143,7 +4146,7 @@ MonoBehaviour:
         textures: []
         materialRenderer: {fileID: 0}
         materials: []
-      inspFoldout: 0
+      inspFoldout: 1
       previewDisplayMode: 0
       collectionExpand: 0
     trigger: 0
@@ -5424,7 +5427,7 @@ MonoBehaviour:
   randomHoldDurationMax: 0.5
   configReady: 0
   warnOnNullRefs: 1
-  inspSalsaLinked: 1
+  inspSalsaLinked: 0
   inspStateFoldoutProcessing: 0
   inspStateFoldoutSettings: 0
   inspStateFoldoutEmotes: 0
@@ -5688,6 +5691,19 @@ MonoBehaviour:
   - {fileID: 575663975}
   - {fileID: 918685073}
   - {fileID: 575663974}
+--- !u!114 &1955365785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955365777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00252046faaef0647a0a240490d3d467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::uLipSync_Salsa_Bridge
+  silenceThreshold: 0.01
 --- !u!1001 &2024708948
 PrefabInstance:
   m_ObjectHideFlags: 0
