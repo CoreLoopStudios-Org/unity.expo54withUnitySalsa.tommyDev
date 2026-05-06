@@ -396,6 +396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fb0620b55bc48439595bd214b2d569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestSTTBypass
+  geminiApiKey: AIzaSyBPqG6a4OEfXSDGHjPhoPdQeYXkD89EPeU
+  systemPrompt: 'You are a friendly Hebrew teacher named Yana. The user is a beginner.
+    Keep your responses short and simple. Always reply in Hebrew. and then translate
+    it in English. '
 --- !u!4 &468841685
 Transform:
   m_ObjectHideFlags: 0
@@ -1107,7 +1111,7 @@ MonoBehaviour:
   <ServerEndpoint>k__BackingField: 0
   <ConnectOnStart>k__BackingField: 1
   _turnTakingOptions:
-    <Mode>k__BackingField: 0
+    <Mode>k__BackingField: 1
     <TurnDetection>k__BackingField: 0
     <CustomTurnDetection>k__BackingField:
       <StopSecs>k__BackingField: 3

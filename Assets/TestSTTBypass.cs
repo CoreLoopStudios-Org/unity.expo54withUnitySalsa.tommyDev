@@ -1,36 +1,42 @@
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 using System.Reflection;
-using UnityEngine.InputSystem; // Added for the new Input System
+using UnityEngine.InputSystem;
+using UnityEngine.Networking;
+using System.Collections;
+using System.Text;
 
 public class TestSTTBypass : MonoBehaviour
 {
+    [Header("Gemini API Settings")]
+    [Tooltip("Enter your Google Gemini API Key here.")]
+    public string geminiApiKey = "";
+    
+    [TextArea(5, 15)]
+    public string systemPrompt = "You are Yana, a friendly conversational Hebrew teacher. The user is a beginner. Do NOT simply repeat or translate what the user says. Instead, engage in a natural conversation. Teach them Hebrew step-by-step. If they say 'hello', introduce yourself, explain the Hebrew word for it ('Shalom'), and ask them to pronounce it. Keep your responses short. Always provide your response in Hebrew, followed by its English translation in a new line.";
+
     private DictationRecognizer dictationRecognizer;
     
-    // We will find the ConvaiPlayer dynamically to avoid namespace issues
+    // We will find the ConvaiPlayer dynamically to send the SSML bypass message
     private MonoBehaviour convaiPlayer;
 
     void Start()
     {
         // Try to find the Convai Player in the scene
-        GameObject playerObj = GameObject.Find("Convai Player");
-        if (playerObj != null)
+        MonoBehaviour[] allScripts = FindObjectsOfType<MonoBehaviour>();
+        foreach (var script in allScripts)
         {
-            MonoBehaviour[] scripts = playerObj.GetComponents<MonoBehaviour>();
-            foreach (var script in scripts)
+            if (script.GetType().Name.Contains("ConvaiPlayer"))
             {
-                if (script.GetType().Name.Contains("ConvaiPlayer"))
-                {
-                    convaiPlayer = script;
-                    Debug.Log("[BypassDemo] Found ConvaiPlayer component!");
-                    break;
-                }
+                convaiPlayer = script;
+                Debug.Log("[BypassDemo] Found ConvaiPlayer component!");
+                break;
             }
         }
 
         if (convaiPlayer == null)
         {
-            Debug.LogError("[BypassDemo] Could not find 'Convai Player' object or component in the scene.");
+            Debug.LogError("[BypassDemo] Could not find ConvaiPlayer component in the scene.");
         }
 
         // Initialize Windows Dictation
@@ -47,7 +53,8 @@ public class TestSTTBypass : MonoBehaviour
                 dictationRecognizer.Stop();
             }
 
-            SendToConvai(text);
+            // Instead of sending straight to Convai, we send to Gemini first.
+            StartCoroutine(SendToGeminiAndThenConvai(text));
         };
 
         dictationRecognizer.DictationComplete += (completionCause) =>
@@ -80,22 +87,149 @@ public class TestSTTBypass : MonoBehaviour
         }
     }
 
-    void SendToConvai(string text)
+    IEnumerator SendToGeminiAndThenConvai(string userText)
     {
-        if (convaiPlayer != null)
+        if (string.IsNullOrEmpty(geminiApiKey))
         {
-            // Call SendTextMessage on the ConvaiPlayer
-            // Using reflection since we don't have the exact namespace reference compiled in this script
-            MethodInfo sendMethod = convaiPlayer.GetType().GetMethod("SendTextMessage", BindingFlags.Public | BindingFlags.Instance);
-            if (sendMethod != null)
+            Debug.LogError("[BypassDemo] Gemini API Key is missing! Please enter it in the Inspector.");
+            yield break;
+        }
+
+        Debug.Log("<color=cyan>[BypassDemo] Sending text to Gemini...</color>");
+
+        string url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key={geminiApiKey}";
+        
+        // Escape strings safely for JSON
+        string safeSystemPrompt = EscapeJsonString(systemPrompt);
+        string safeUserText = EscapeJsonString(userText);
+
+        string jsonPayload = $@"{{
+            ""system_instruction"": {{
+                ""parts"": [
+                    {{""text"": ""{safeSystemPrompt}""}}
+                ]
+            }},
+            ""contents"": [
+                {{
+                    ""parts"": [
+                        {{""text"": ""{safeUserText}""}}
+                    ]
+                }}
+            ]
+        }}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonPayload);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
             {
-                Debug.Log("<color=cyan>[BypassDemo] Sending text to Convai LLM: </color>" + text);
-                sendMethod.Invoke(convaiPlayer, new object[] { text });
+                Debug.LogError("[BypassDemo] Gemini Request Error: " + request.error + " - " + request.downloadHandler.text);
             }
             else
             {
-                Debug.LogError("[BypassDemo] Could not find 'SendTextMessage(string)' method on ConvaiPlayer.");
+                string responseText = request.downloadHandler.text;
+                string geminiReply = ExtractGeminiContent(responseText);
+                
+                if (!string.IsNullOrEmpty(geminiReply))
+                {
+                    Debug.Log("<color=cyan>[BypassDemo] Gemini replied: </color>" + geminiReply);
+                    
+                    // Directly send TTS action through RTVI to bypass Convai's LLM completely.
+                    SendDirectTTSToConvai(geminiReply);
+                }
+                else
+                {
+                    Debug.LogError("[BypassDemo] Failed to parse Gemini response: " + responseText);
+                }
             }
+        }
+    }
+
+    private string EscapeJsonString(string text)
+    {
+        if (string.IsNullOrEmpty(text)) return text;
+        return text.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("\n", "\\n").Replace("\r", "\\r");
+    }
+
+    // Gemini JSON Response Classes
+    [System.Serializable]
+    private class GeminiResponse
+    {
+        public Candidate[] candidates;
+    }
+
+    [System.Serializable]
+    private class Candidate
+    {
+        public Content content;
+    }
+
+    [System.Serializable]
+    private class Content
+    {
+        public Part[] parts;
+    }
+
+    [System.Serializable]
+    private class Part
+    {
+        public string text;
+    }
+
+    private string ExtractGeminiContent(string jsonResponse)
+    {
+        try
+        {
+            GeminiResponse response = JsonUtility.FromJson<GeminiResponse>(jsonResponse);
+            if (response != null && response.candidates != null && response.candidates.Length > 0)
+            {
+                if (response.candidates[0].content != null && response.candidates[0].content.parts != null && response.candidates[0].content.parts.Length > 0)
+                {
+                    return response.candidates[0].content.parts[0].text;
+                }
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("[BypassDemo] JSON Parsing Error: " + e.Message);
+        }
+        return null;
+    }
+
+    void SendDirectTTSToConvai(string text)
+    {
+        if (convaiPlayer == null)
+        {
+            Debug.LogError("[BypassDemo] ConvaiPlayer is null. Cannot send SSML action.");
+            return;
+        }
+
+        try
+        {
+            // Wrap text in SSML <speak> tags to bypass Convai LLM
+            string ssmlText = $"<speak>{text}</speak>";
+
+            // Get the SendTextMessage(string) method
+            MethodInfo sendTextMethod = convaiPlayer.GetType().GetMethod("SendTextMessage", new System.Type[] { typeof(string) });
+            if (sendTextMethod == null)
+            {
+                Debug.LogError("[BypassDemo] Could not find 'SendTextMessage' method on ConvaiPlayer.");
+                return;
+            }
+
+            // Invoke SendTextMessage
+            Debug.Log("<color=cyan>[BypassDemo] Sending SSML TTS text to bypass LLM: </color>" + ssmlText);
+            sendTextMethod.Invoke(convaiPlayer, new object[] { ssmlText });
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("[BypassDemo] Error sending SSML action: " + ex.Message);
         }
     }
 
