@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8968d908a4ac44d45b35c91a3ebf5a52
+timeCreated: 1494312703
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50694
+  packageName: Winston - iClone Character
+  packageVersion: 1.03
+  assetPath: Assets/Winston/Materials/Skin_Head_Diffuse.mat
+  uploadId: 184236

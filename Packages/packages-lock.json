@@ -1,14 +1,15 @@
 {
   "dependencies": {
-    "com.hecomi.ulipsync": {
-      "version": "https://github.com/hecomi/uLipSync.git#upm",
+    "com.convai.convai-sdk-for-unity": {
+      "version": "4.1.0",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {
-        "com.unity.burst": "1.4.11",
-        "com.unity.mathematics": "1.2.5"
+        "com.unity.ugui": "2.0.0",
+        "com.unity.inputsystem": "1.18.0",
+        "com.unity.nuget.newtonsoft-json": "3.2.2"
       },
-      "hash": "ece3272762f2148dd8d3e658ec04fcbd79d4d97e"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ai.navigation": {
       "version": "2.0.11",
@@ -21,7 +22,7 @@
     },
     "com.unity.burst": {
       "version": "1.8.28",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
@@ -29,21 +30,8 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.cloud.gltfast": {
-      "version": "6.18.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.burst": "1.8.24",
-        "com.unity.collections": "1.2.4",
-        "com.unity.mathematics": "1.2.6",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.unitywebrequest": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.collab-proxy": {
-      "version": "2.11.4",
+      "version": "2.11.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -51,7 +39,7 @@
     },
     "com.unity.collections": {
       "version": "6.5.0",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.burst": "1.8.25",
@@ -67,7 +55,7 @@
       "dependencies": {}
     },
     "com.unity.ide.rider": {
-      "version": "3.0.39",
+      "version": "3.0.38",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -76,7 +64,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.27",
+      "version": "2.0.26",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -95,7 +83,7 @@
     },
     "com.unity.mathematics": {
       "version": "1.4.0",
-      "depth": 1,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
@@ -109,7 +97,14 @@
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.6",
-      "depth": 2,
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.2",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -171,7 +166,7 @@
     },
     "com.unity.test-framework.performance": {
       "version": "3.2.0",
-      "depth": 2,
+      "depth": 3,
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.33",
@@ -180,7 +175,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.8.11",
+      "version": "1.8.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -204,7 +199,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.11",
+      "version": "1.9.10",
       "depth": 0,
       "source": "registry",
       "dependencies": {

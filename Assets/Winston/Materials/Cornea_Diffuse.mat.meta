@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 19b1faa80ce669f488121b1bf0ad0c2f
+timeCreated: 1494312705
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50694
+  packageName: Winston - iClone Character
+  packageVersion: 1.03
+  assetPath: Assets/Winston/Materials/Cornea_Diffuse.mat
+  uploadId: 184236

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4f8d6bbfdd912d1408e7d07ec6342057
+timeCreated: 1494312709
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50694
+  packageName: Winston - iClone Character
+  packageVersion: 1.03
+  assetPath: Assets/Winston/Materials/Dummy.mat
+  uploadId: 184236
