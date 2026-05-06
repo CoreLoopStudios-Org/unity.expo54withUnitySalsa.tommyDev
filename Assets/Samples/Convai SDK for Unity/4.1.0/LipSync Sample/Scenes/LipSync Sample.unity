@@ -367,6 +367,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6229970646262220196, guid: c9545ad81de3ed243bdce7ffde4b71bd, type: 3}
   m_PrefabInstance: {fileID: 1678221696841572227}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &468841683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468841685}
+  - component: {fileID: 468841684}
+  m_Layer: 0
+  m_Name: Bypass Demo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &468841684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468841683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fb0620b55bc48439595bd214b2d569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestSTTBypass
+--- !u!4 &468841685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468841683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.10659, y: 1.86684, z: -9.36496}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &600414035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,7 +1762,7 @@ MonoBehaviour:
   _configurationSourceInitialized: 1
   _characterConfigAsset: {fileID: 0}
   _characterId: 98de9584-45f4-11f1-bf55-42010a7be02c
-  _characterName: Lexi
+  _characterName: Yael Avraham
   _nameTagColor: {r: 1, g: 1, b: 1, a: 1}
   _autoConnect: 1
   _enableRemoteAudio: 1
@@ -2881,3 +2925,4 @@ SceneRoots:
   - {fileID: 1588866995}
   - {fileID: 1506215783}
   - {fileID: 1800341006}
+  - {fileID: 468841685}
