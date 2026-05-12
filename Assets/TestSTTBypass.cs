@@ -74,6 +74,7 @@ public class TestSTTBypass : MonoBehaviour
         // Using the new Input System to check if Spacebar was pressed this frame
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
             if (dictationRecognizer.Status == SpeechSystemStatus.Running)
             {
                 Debug.Log("<color=yellow>[BypassDemo] Stopping STT...</color>");
@@ -84,6 +85,7 @@ public class TestSTTBypass : MonoBehaviour
                 Debug.Log("<color=yellow>[BypassDemo] Starting Windows STT. Speak now...</color>");
                 dictationRecognizer.Start();
             }
+#endif
         }
     }
 
@@ -212,8 +214,8 @@ public class TestSTTBypass : MonoBehaviour
 
         try
         {
-            // Wrap text in SSML <speak> tags to bypass Convai LLM
-            string ssmlText = $"<speak>{text}</speak>";
+            // Pass plain text. The Convai character must be configured as a 'Relay Character' on the dashboard.
+            string plainText = text;
 
             // Get the SendTextMessage(string) method
             MethodInfo sendTextMethod = convaiPlayer.GetType().GetMethod("SendTextMessage", new System.Type[] { typeof(string) });
@@ -224,8 +226,8 @@ public class TestSTTBypass : MonoBehaviour
             }
 
             // Invoke SendTextMessage
-            Debug.Log("<color=cyan>[BypassDemo] Sending SSML TTS text to bypass LLM: </color>" + ssmlText);
-            sendTextMethod.Invoke(convaiPlayer, new object[] { ssmlText });
+            Debug.Log("<color=cyan>[BypassDemo] Sending plain text to Convai (Relay strategy): </color>" + plainText);
+            sendTextMethod.Invoke(convaiPlayer, new object[] { plainText });
         }
         catch (System.Exception ex)
         {
