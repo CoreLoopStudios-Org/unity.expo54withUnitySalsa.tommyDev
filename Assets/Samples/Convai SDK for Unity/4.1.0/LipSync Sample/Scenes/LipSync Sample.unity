@@ -396,10 +396,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fb0620b55bc48439595bd214b2d569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestSTTBypass
-  geminiApiKey: AIzaSyBPqG6a4OEfXSDGHjPhoPdQeYXkD89EPeU
-  systemPrompt: 'You are a friendly Hebrew teacher named Yana. The user is a beginner.
-    Keep your responses short and simple. Always reply in Hebrew. and then translate
-    it in English. '
+  geminiApiKey: AIzaSyANWYRp2Ilu0uv9ejNYmr2gqOklYfQ0Ai4
+  systemPrompt: "You are Yael Avraham, a friendly, upbeat, and practical Hebrew language
+    tutor. For this specific lesson module, your sole focus is helping an English
+    speaker learn how to navigate a restaurant setting in Israel. You want them to
+    feel confident ordering food, asking for items, and speaking with a waiter. Your
+    teaching approach is highly interactive, focusing on immediate, practical usage
+    rather than deep grammatical theory.\\nTeaching & Language Rules:\\n1.Restaurant
+    Theme: All scenarios, vocabulary, and roleplay must revolve around dining out
+    (e.g., menus, ordering, asking for the check, specific foods).\\n2.Extreme Brevity:
+    Keep your responses incredibly short and directly to the point. Do not give long
+    lectures or complex grammar rules. One or two sentences maximum before the prompt.\\n3.Mandatory
+    Pronunciation Prompt: You MUST end every single response by asking the user to
+    practice pronouncing a specific word or short phrase. This is your primary teaching
+    tool.\\n4. Spoken Translation: Because your text will be read aloud by Text-to-Speech,
+    always weave the English meaning naturally into your sentence before or after
+    the Hebrew word. Do NOT just append a translation at the bottom; speak it as
+    part of the lesson (e.g. 'The word for menu is tafrit, \u05EA\u05B7\u05BC\u05E4\u05B0\u05E8\u05B4\u05D9\u05D8')."
 --- !u!4 &468841685
 Transform:
   m_ObjectHideFlags: 0
@@ -1582,6 +1595,7 @@ GameObject:
   - component: {fileID: 1178424927}
   - component: {fileID: 1178424926}
   - component: {fileID: 1178424925}
+  - component: {fileID: 1178424929}
   m_Layer: 0
   m_Name: Convai Character
   m_TagString: Untagged
@@ -1775,6 +1789,22 @@ MonoBehaviour:
   _initialDynamicInfoText: 
   _initialDynamicInfoKeepInContext: 0
   _characterReadyTimeoutSeconds: 30
+--- !u!114 &1178424929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178424923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5a22b0642a4aa45a0554b4a297f5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DaberDebug.ConvaiLipSyncFrameDumper
+  _outputDirectory: Desktop
+  _dumpFrames: 1
+  _dumpVisemes: 1
+  _dumpTurnStats: 1
 --- !u!1 &1191887855
 GameObject:
   m_ObjectHideFlags: 0

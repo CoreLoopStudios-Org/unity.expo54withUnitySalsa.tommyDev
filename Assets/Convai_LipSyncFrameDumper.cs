@@ -32,6 +32,7 @@ using System.IO;
 using System.Text;
 using Convai.Domain.DomainEvents.LipSync;
 using Convai.Domain.EventSystem;
+using Convai.Runtime.Components;
 using Convai.Runtime.Core; // ConvaiManager.ActiveManager
 using UnityEngine;
 
@@ -95,11 +96,7 @@ namespace DaberDebug
             var manager = ConvaiManager.ActiveManager;
             if (manager == null) return;
 
-            // ConvaiManager exposes Events through its module context after StartAsync.
-            // We pull it via reflection-free path: ConvaiManager has a public Events property in 4.1.
-            var hubProp = manager.GetType().GetProperty("Events");
-            _hub = hubProp?.GetValue(manager) as IEventHub;
-            if (_hub == null) return;
+            if (!manager.TryGetEventHub(out _hub)) return;
 
             OpenFile();
             _packedToken = _hub.Subscribe<LipSyncPackedDataReceived>(OnPacked);
