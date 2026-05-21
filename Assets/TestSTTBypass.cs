@@ -80,18 +80,102 @@ public class TestSTTBypass : MonoBehaviour
         // Using the new Input System to check if Spacebar was pressed this frame
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
+            ToggleSTT();
+        }
+    }
+
+    public void ToggleSTT()
+    {
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
-            if (dictationRecognizer.Status == SpeechSystemStatus.Running)
-            {
-                Debug.Log("<color=yellow>[BypassDemo] Stopping STT...</color>");
-                dictationRecognizer.Stop();
-            }
-            else
-            {
-                Debug.Log("<color=yellow>[BypassDemo] Starting Windows STT. Speak now...</color>");
-                dictationRecognizer.Start();
-            }
+        if (dictationRecognizer.Status == SpeechSystemStatus.Running)
+        {
+            StopSTT();
+        }
+        else
+        {
+            StartSTT();
+        }
+#else
+        Debug.LogWarning("[BypassDemo] ToggleSTT called on non-Windows platform. Implement Android STT trigger here.");
 #endif
+    }
+
+    public void StartSTT()
+    {
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+        if (dictationRecognizer != null && dictationRecognizer.Status != SpeechSystemStatus.Running)
+        {
+            Debug.Log("<color=yellow>[BypassDemo] Starting Windows STT. Speak now...</color>");
+            dictationRecognizer.Start();
+            return;
+        }
+#endif
+
+        // Fallback for Android or if Windows STT is not used: Try to trigger Convai's built-in recording
+        if (convaiPlayer != null)
+        {
+            try
+            {
+                MethodInfo startRecordingMethod = convaiPlayer.GetType().GetMethod("StartRecording");
+                if (startRecordingMethod != null)
+                {
+                    Debug.Log("<color=yellow>[BypassDemo] Triggering Convai StartRecording via reflection...</color>");
+                    startRecordingMethod.Invoke(convaiPlayer, null);
+                }
+                else
+                {
+                    // Some versions use 'ActivateVoice' or similar
+                    MethodInfo activateVoiceMethod = convaiPlayer.GetType().GetMethod("ActivateVoice");
+                    if (activateVoiceMethod != null)
+                    {
+                        Debug.Log("<color=yellow>[BypassDemo] Triggering Convai ActivateVoice via reflection...</color>");
+                        activateVoiceMethod.Invoke(convaiPlayer, null);
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError("[BypassDemo] Error triggering Convai recording: " + ex.Message);
+            }
+        }
+    }
+
+    public void StopSTT()
+    {
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+        if (dictationRecognizer != null && dictationRecognizer.Status == SpeechSystemStatus.Running)
+        {
+            Debug.Log("<color=yellow>[BypassDemo] Stopping Windows STT...</color>");
+            dictationRecognizer.Stop();
+            return;
+        }
+#endif
+
+        // Fallback: Try to trigger Convai's built-in stop recording
+        if (convaiPlayer != null)
+        {
+            try
+            {
+                MethodInfo stopRecordingMethod = convaiPlayer.GetType().GetMethod("StopRecording");
+                if (stopRecordingMethod != null)
+                {
+                    Debug.Log("<color=yellow>[BypassDemo] Triggering Convai StopRecording via reflection...</color>");
+                    stopRecordingMethod.Invoke(convaiPlayer, null);
+                }
+                else
+                {
+                    MethodInfo deactivateVoiceMethod = convaiPlayer.GetType().GetMethod("DeactivateVoice");
+                    if (deactivateVoiceMethod != null)
+                    {
+                        Debug.Log("<color=yellow>[BypassDemo] Triggering Convai DeactivateVoice via reflection...</color>");
+                        deactivateVoiceMethod.Invoke(convaiPlayer, null);
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError("[BypassDemo] Error stopping Convai recording: " + ex.Message);
+            }
         }
     }
 
