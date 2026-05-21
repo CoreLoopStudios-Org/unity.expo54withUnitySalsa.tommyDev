@@ -1,5 +1,7 @@
 using UnityEngine;
+#if UNITY_STANDALONE_WIN || UNITY_WSA || UNITY_EDITOR_WIN
 using UnityEngine.Windows.Speech;
+#endif
 using System.Reflection;
 using UnityEngine.InputSystem;
 using UnityEngine.Networking;
@@ -15,7 +17,9 @@ public class TestSTTBypass : MonoBehaviour
     [TextArea(5, 15)]
     public string systemPrompt = "You are Yana, a friendly conversational Hebrew teacher. The user is a beginner. Do NOT simply repeat or translate what the user says. Instead, engage in a natural conversation. Teach them Hebrew step-by-step. If they say 'hello', introduce yourself, explain the Hebrew word for it ('Shalom'), and ask them to pronounce it. Keep your responses short. Always provide your response in Hebrew, followed by its English translation in a new line.";
 
+#if UNITY_STANDALONE_WIN || UNITY_WSA || UNITY_EDITOR_WIN
     private DictationRecognizer dictationRecognizer;
+#endif
     
     // We will find the ConvaiPlayer dynamically to send the SSML bypass message
     private MonoBehaviour convaiPlayer;
@@ -39,6 +43,7 @@ public class TestSTTBypass : MonoBehaviour
             Debug.LogError("[BypassDemo] Could not find ConvaiPlayer component in the scene.");
         }
 
+#if UNITY_STANDALONE_WIN || UNITY_WSA || UNITY_EDITOR_WIN
         // Initialize Windows Dictation
         dictationRecognizer = new DictationRecognizer();
 
@@ -67,6 +72,7 @@ public class TestSTTBypass : MonoBehaviour
         {
             Debug.LogErrorFormat("[BypassDemo] Dictation error: {0}; HResult = {1}.", error, hresult);
         };
+#endif
     }
 
     void Update()
@@ -237,6 +243,7 @@ public class TestSTTBypass : MonoBehaviour
 
     void OnApplicationQuit()
     {
+#if UNITY_STANDALONE_WIN || UNITY_WSA || UNITY_EDITOR_WIN
         if (dictationRecognizer != null)
         {
             if (dictationRecognizer.Status == SpeechSystemStatus.Running)
@@ -245,5 +252,6 @@ public class TestSTTBypass : MonoBehaviour
             }
             dictationRecognizer.Dispose();
         }
+#endif
     }
 }

@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &71386835
 Transform:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fb0620b55bc48439595bd214b2d569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestSTTBypass
-  geminiApiKey: AIzaSyBPqG6a4OEfXSDGHjPhoPdQeYXkD89EPeU
+  geminiApiKey: AIzaSyDyYgrmlV4MsHbTWvmbu9K9khlsgiWkhBA
   systemPrompt: 'You are a friendly Hebrew teacher named Yana. The user is a beginner.
     Keep your responses short and simple. Always reply in Hebrew. and then translate
     it in English. '
@@ -1104,7 +1104,7 @@ MonoBehaviour:
   _configurationSource: 0
   _configurationSourceInitialized: 1
   _legacyConversationSettingsMigrated: 0
-  _roomConfigAsset: {fileID: 11400000, guid: 1f230b30cf7764a71b5b74a14d6f6521, type: 2}
+  _roomConfigAsset: {fileID: 0}
   _connectionType: 0
   <VideoTrackName>k__BackingField: unity-scene
   <CoreServerBaseURL>k__BackingField: 
