@@ -374,10 +374,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1462903466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 336, y: 181.56989}
-  m_SizeDelta: {x: 110.079, y: 110.079}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -121.13391, y: 155.6452}
+  m_SizeDelta: {x: 110.07898, y: 110.079}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165520624
 MonoBehaviour:
@@ -631,10 +631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fb0620b55bc48439595bd214b2d569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestSTTBypass
-  geminiApiKey: AIzaSyDyYgrmlV4MsHbTWvmbu9K9khlsgiWkhBA
-  systemPrompt: 'You are a friendly Hebrew teacher named Yana. The user is a beginner.
-    Keep your responses short and simple. Always reply in Hebrew. and then translate
-    it in English. '
 --- !u!4 &468841685
 Transform:
   m_ObjectHideFlags: 0
@@ -645,6 +641,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.10659, y: 1.86684, z: -9.36496}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &500421391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500421392}
+  m_Layer: 0
+  m_Name: ConvaiNPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &500421392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500421391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1104.2135, y: 65.7865, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2013,7 +2040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1462903466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2653,6 +2680,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8345665120300085735, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2766,6 +2797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1800341006}
+  - component: {fileID: 1800341007}
   m_Layer: 0
   m_Name: Convai
   m_TagString: Untagged
@@ -2793,6 +2825,18 @@ Transform:
   - {fileID: 109986983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1800341007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800341005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fff089a837fd6428850be8c2bcd1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConvaiNPCBridge
 --- !u!1001 &1833562211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2978,3 +3022,4 @@ SceneRoots:
   - {fileID: 1506215783}
   - {fileID: 1800341006}
   - {fileID: 468841685}
+  - {fileID: 500421392}

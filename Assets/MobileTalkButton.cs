@@ -1,9 +1,12 @@
+// Editor / standalone debugging helper — NOT compiled into WebGL builds.
+// Input in WebGL comes from the RN app via ConvaiNPCBridge.ReceiveTextFromApp.
+#if !UNITY_WEBGL || UNITY_EDITOR
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 /// <summary>
-/// A simple script to bridge a UI Button to the TestSTTBypass script.
-/// Supports both Tap-to-Toggle and Hold-to-Talk (Push-to-Talk).
+/// Simple UI-button bridge to TestSTTBypass for editor / standalone debugging.
 /// </summary>
 public class MobileTalkButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
 {
@@ -14,32 +17,20 @@ public class MobileTalkButton : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     private void Start()
     {
         if (sttBypass == null)
-        {
             sttBypass = FindObjectOfType<TestSTTBypass>();
-        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (pushToTalk && sttBypass != null)
-        {
-            sttBypass.StartSTT();
-        }
+        if (pushToTalk) sttBypass?.SendDirectTTSToConvai("[push-to-talk start]");
     }
 
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        if (pushToTalk && sttBypass != null)
-        {
-            sttBypass.StopSTT();
-        }
-    }
+    public void OnPointerUp(PointerEventData eventData) { }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (!pushToTalk && sttBypass != null)
-        {
-            sttBypass.ToggleSTT();
-        }
+        if (!pushToTalk) sttBypass?.SendDirectTTSToConvai("[tap-to-toggle]");
     }
 }
+
+#endif // !UNITY_WEBGL || UNITY_EDITOR
