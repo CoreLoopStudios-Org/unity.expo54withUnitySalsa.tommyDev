@@ -655,6 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 500421392}
+  - component: {fileID: 500421393}
   m_Layer: 0
   m_Name: ConvaiNPC
   m_TagString: Untagged
@@ -677,6 +678,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &500421393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500421391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fff089a837fd6428850be8c2bcd1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConvaiNPCBridge
 --- !u!1 &600414035
 GameObject:
   m_ObjectHideFlags: 0
