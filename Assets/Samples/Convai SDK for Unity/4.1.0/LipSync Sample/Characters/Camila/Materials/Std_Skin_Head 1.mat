@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5629428302419405705
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,20 +20,28 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Std_Skin_Arm
-  m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
+  m_Name: Std_Skin_Head 1
+  m_Shader: {fileID: -6465566751694194690, guid: 93e6d915c8e66ea4782e9402aaf9a8de, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - BOOLEAN_IS_HEAD_ON
+  - BOOLEAN_USE_SSS_ON
+  - ENUM_DISPLACEMENT_MODE_NONE
+  - ENUM_WRINKLE_MODE_WRINKLE
+  m_InvalidKeywords:
+  - BOOLEAN_USE_BLENDING_ON
+  - BOOLEAN_USE_CAVITY_ON
+  - BOOLEAN_USE_TEXTURE_PACKING_ON
+  - BOOLEAN_USE_WRINKLE_ON
+  - _DISABLE_SSR_TRANSPARENT
   - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 6
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
-    RenderType: Opaque
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -31,16 +52,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 2f8f471062f4ad24b86a72e1478c819b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _CFULCMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: bb9c7476274dfeb4d8b49ac6b5ff33a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CavityMap:
@@ -48,19 +61,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlendMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8da7f33b3839f61428602b36463edf48, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 2f8f471062f4ad24b86a72e1478c819b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 149d3fffdc558b646ba2b0770848e380, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementMap:
-        m_Texture: {fileID: 2800000, guid: 48bb71ec1664d314c96ddc9544717e3d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 773cc5f3790ea864a8b246f8f70ff8cb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EarNeckMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ebb1a4132b82a2f49862a7b04d47c49b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -68,15 +81,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MNAOMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2f8f471062f4ad24b86a72e1478c819b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 77480b3bc6fd8254682bf3680481375b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 6d39b4a8229105e4b93a4c7477601816, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b2eb03dbbe3a264992f15ad6aa9df87, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MicroNormalMap:
@@ -84,31 +93,27 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalBlendMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a218e213d9556e842bc56012cf4742c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 5a99f8eda35ea5940a118cc65fbd812c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0e0b9678ccd35e3499dd53d19757b363, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RGBAMask:
-        m_Texture: {fileID: 2800000, guid: 47af85df68273f44cb68874dbfa90b03, type: 3}
+        m_Texture: {fileID: 2800000, guid: 393bffbaa4eb28c44802f3be0473f480, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SSSThicknessPack:
-        m_Texture: {fileID: 2800000, guid: 4371ec6ab9f1d724993f03c0b07c00c6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9c60407a46212a1468bce61b18bc0203, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceBlurMap:
-        m_Texture: {fileID: 2800000, guid: 0a883efdef342cf459b8e26d98cb451a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5a069543aac951e449ac731f42dc4152, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDiffuseArray:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 18700000, guid: b1873cae30c48304b8207432e0534428, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDisplacementPack:
@@ -116,19 +121,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleFlowPack:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0039595f157d2af4e93c1fb76ba58d47, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleMaskSetArray:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 18700000, guid: a08a219be7b2e9a43a6a8e892cea096f, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleNormalArray:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 18700000, guid: f5135363f5482684db409568280982dc, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleRoughnessPack:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 81464ced2ad4b6c469ee42b6fa7b5214, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -145,89 +150,63 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - BOOLEAN_IS_HEAD: 0
+    - BOOLEAN_IS_HEAD: 1
     - BOOLEAN_USE_SSS: 1
     - ENUM_DISPLACEMENT_MODE: 0
-    - ENUM_WRINKLE_MODE: 0
+    - ENUM_WRINKLE_MODE: 1
     - _AOStrength: 1
-    - _AScatterScale: 2
-    - _ASmoothnessMod: 0
-    - _AddPrecomputedVelocity: 0
-    - _AlphaClip: 0
-    - _AlphaToMask: 0
-    - _BScatterScale: 2
-    - _BSmoothnessMod: 0
-    - _Blend: 0
-    - _BlendModePreserveSpecular: 1
-    - _BumpScale: 1
+    - _AScatterScale: 1
+    - _ASmoothnessMod: 0.574
+    - _BScatterScale: 1
+    - _BSmoothnessMod: 0.3
     - _BumpStrength: 0.01
     - _CavityStrength: 1
     - _CheekScatterScale: 1
     - _CheekSmoothnessMod: 0
     - _ChinScatterScale: 1
     - _ChinSmoothnessMod: 0
-    - _ColorBlendStrength: 0.5
-    - _Cull: 2
-    - _Cutoff: 0.5
+    - _ColorBlendStrength: 0
     - _DisplacementLevel: 0.5
     - _DisplacementStrength: 0.01
-    - _DstBlend: 0
-    - _DstBlendAlpha: 0
     - _EarScatterScale: 1
     - _EarSmoothnessMod: 0
     - _ForeheadScatterScale: 1
     - _ForeheadSmoothnessMod: 0
-    - _GScatterScale: 2
-    - _GSmoothnessMod: 0
-    - _GlossinessSource: 0
+    - _GScatterScale: 1
+    - _GSmoothnessMod: 0.06
     - _LipsCavityAO: 2.5
-    - _MicroNormalStrength: 0.8
+    - _MicroNormalStrength: 2
     - _MicroNormalTiling: 25
     - _MicroSmoothnessMod: -0.05
-    - _MouthCavityAO: 2.5
+    - _MouthCavityAO: 1.581
     - _NeckScatterScale: 1
     - _NeckSmoothnessMod: 0
-    - _NormalBlendStrength: 0.5
+    - _NormalBlendStrength: 0
     - _NormalStrength: 1
     - _NostrilCavityAO: 2.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RScatterScale: 2
-    - _RSmoothnessMod: 0
-    - _ReceiveShadows: 1
+    - _RScatterScale: 1
+    - _RSmoothnessMod: -0.119
     - _SSSBlend: 0.6
     - _SSSDistortion: 0.5
     - _SSSTransmission: 5
-    - _Shininess: 0
-    - _Smoothness: 0.5
     - _SmoothnessContrast: 1.35
-    - _SmoothnessMax: 0.7622153
+    - _SmoothnessMax: 0.75
     - _SmoothnessMin: 0.14999998
-    - _SmoothnessSource: 0
-    - _SpecSource: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _SrcBlendAlpha: 1
     - _SubsurfaceScale: 1.4025
-    - _Surface: 0
     - _ThicknessScale: 0.9
     - _ThicknessScaleMin: 0.4
-    - _UnmaskedScatterScale: 2
+    - _UnmaskedScatterScale: 1
     - _UnmaskedSmoothnessMod: 0
     - _UpperLipScatterScale: 1
     - _UpperLipSmoothnessMod: 0
     - _UseBlend: 0
     - _UseCavity: 0
     - _WrinkleDisplacementStrength: 1
-    - _XRMotionVectorsPass: 1
-    - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffuseColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
     - _SubsurfaceFalloff: {r: 1, g: 0.37, b: 0.3, a: 1}
     - _WrinkleValueSet12CL: {r: 0, g: 0, b: 0, a: 0}
     - _WrinkleValueSet12CR: {r: 0, g: 0, b: 0, a: 0}
@@ -243,7 +222,7 @@ Material:
     - _WrinkleValueSetBCCB: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1219166778049182883
+--- !u!114 &5158211042359519660
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,16 +238,3 @@ MonoBehaviour:
   hdPluginSubTargetMaterialVersions:
     m_Keys: []
     m_Values: 
---- !u!114 &6971003486698708026
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
-  version: 10

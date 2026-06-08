@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1567548813038845082
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Editor::UnityEditor.Rendering.HighDefinition.AssetVersion
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,7 +23,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Std_Skin_Arm
+  m_Name: Std_Skin_Leg Albedo only
   m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -32,7 +48,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 2f8f471062f4ad24b86a72e1478c819b, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -52,11 +68,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 2f8f471062f4ad24b86a72e1478c819b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9496b137be0a84b469f1aecb4c991aa3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementMap:
-        m_Texture: {fileID: 2800000, guid: 48bb71ec1664d314c96ddc9544717e3d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3944a2a3ce924e44a9c14c1c2295a745, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EarNeckMask:
@@ -72,11 +88,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2f8f471062f4ad24b86a72e1478c819b, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 6d39b4a8229105e4b93a4c7477601816, type: 3}
+        m_Texture: {fileID: 2800000, guid: 450c642a33ad93543b3c3fd8a8042104, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MicroNormalMap:
@@ -88,15 +104,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 5a99f8eda35ea5940a118cc65fbd812c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 70dade45fb4b8d441ace26a6f17202ab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RGBAMask:
-        m_Texture: {fileID: 2800000, guid: 47af85df68273f44cb68874dbfa90b03, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9fc11e878fad4f543b4c749254c8bec2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SSSThicknessPack:
-        m_Texture: {fileID: 2800000, guid: 4371ec6ab9f1d724993f03c0b07c00c6, type: 3}
+        m_Texture: {fileID: 2800000, guid: a5bb81db9e7b9c549bc3292260bc1326, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -104,7 +120,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceBlurMap:
-        m_Texture: {fileID: 2800000, guid: 0a883efdef342cf459b8e26d98cb451a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 21237f85820f7a7488ce138315d6d944, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDiffuseArray:
@@ -243,23 +259,7 @@ Material:
     - _WrinkleValueSetBCCB: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1219166778049182883
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Editor::UnityEditor.Rendering.HighDefinition.AssetVersion
-  version: 13
-  hdPluginSubTargetMaterialVersions:
-    m_Keys: []
-    m_Values: 
---- !u!114 &6971003486698708026
+--- !u!114 &4231046662935408254
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
