@@ -25,6 +25,10 @@ public class ConvaiNPCBridge : MonoBehaviour
     private ConvaiCharacter _convaiCharacter;
     private bool _audioUnlockAttempted;
 
+    [SerializeField]
+    [Tooltip("Drives nod/shake/talking gestures. Auto-discovered if left empty.")]
+    private ConvaiAvatarAnimator _avatarAnimator;
+
 #if UNITY_WEBGL && !UNITY_EDITOR
     [DllImport("__Internal")]
     private static extern void SendToRN(string json);
@@ -34,6 +38,7 @@ public class ConvaiNPCBridge : MonoBehaviour
     {
         _convaiPlayer = FindObjectOfType<ConvaiPlayer>();
         _convaiCharacter = FindObjectOfType<ConvaiCharacter>();
+        if (_avatarAnimator == null) _avatarAnimator = FindObjectOfType<ConvaiAvatarAnimator>();
 
         if (_convaiPlayer == null)
             Debug.LogError("[ConvaiNPCBridge] ConvaiPlayer not found. Check scene setup.");
@@ -48,6 +53,7 @@ public class ConvaiNPCBridge : MonoBehaviour
         _convaiCharacter.OnSpeechStarted += HandleSpeechStarted;
         _convaiCharacter.OnTurnCompleted += HandleTurnCompleted;
         _convaiCharacter.OnSessionStateChanged += HandleSessionStateChanged;
+        _convaiCharacter.OnTranscriptReceived += HandleTranscript;
 
         // Fire immediately if the character is already ready (re-enable / hot-reload case).
         if (_convaiCharacter.IsCharacterReady)
@@ -61,6 +67,7 @@ public class ConvaiNPCBridge : MonoBehaviour
         _convaiCharacter.OnSpeechStarted -= HandleSpeechStarted;
         _convaiCharacter.OnTurnCompleted -= HandleTurnCompleted;
         _convaiCharacter.OnSessionStateChanged -= HandleSessionStateChanged;
+        _convaiCharacter.OnTranscriptReceived -= HandleTranscript;
     }
 
     // ── RN → Unity ────────────────────────────────────────────────────────────
@@ -79,6 +86,9 @@ public class ConvaiNPCBridge : MonoBehaviour
             Debug.LogError("[ConvaiNPCBridge] ReceiveTextFromApp: ConvaiPlayer is null.");
             return;
         }
+
+        // Decide nod/shake now from the words; it fires when speech actually starts.
+        if (_avatarAnimator != null) _avatarAnimator.QueueGestureForText(text);
 
         _convaiPlayer.SendTextMessage(text);
     }
@@ -101,10 +111,22 @@ public class ConvaiNPCBridge : MonoBehaviour
         => Emit("{\"type\":\"UNITY_READY\"}");
 
     private void HandleSpeechStarted()
-        => Emit("{\"type\":\"TURN_STARTED\"}");
+    {
+        _avatarAnimator?.SetSpeaking(true);
+        Emit("{\"type\":\"TURN_STARTED\"}");
+    }
 
     private void HandleTurnCompleted(bool wasInterrupted)
-        => Emit("{\"type\":\"TURN_DONE\"}");
+    {
+        _avatarAnimator?.SetSpeaking(false);
+        Emit("{\"type\":\"TURN_DONE\"}");
+    }
+
+    // Character's own spoken words (works in editor mic test AND in the app) — drives nod/shake.
+    private void HandleTranscript(string text, bool isFinal)
+    {
+        if (_avatarAnimator != null) _avatarAnimator.QueueGestureForText(text);
+    }
 
     private void HandleSessionStateChanged(SessionState state)
     {
