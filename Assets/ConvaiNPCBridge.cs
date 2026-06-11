@@ -21,6 +21,12 @@ using UnityEngine;
 /// </summary>
 public class ConvaiNPCBridge : MonoBehaviour
 {
+    [Header("Speech Animation Settings")]
+    [Tooltip("If not assigned, the script will automatically try to find the Animator on the ConvaiCharacter GameObject or its children.")]
+    [SerializeField] private Animator characterAnimator;
+    [Tooltip("The Animator boolean parameter that will be set to true when speech starts and false when it ends.")]
+    [SerializeField] private string speakingParameterName = "IsSpeaking";
+
     private ConvaiPlayer _convaiPlayer;
     private ConvaiCharacter _convaiCharacter;
     private bool _audioUnlockAttempted;
@@ -42,6 +48,15 @@ public class ConvaiNPCBridge : MonoBehaviour
         {
             Debug.LogError("[ConvaiNPCBridge] ConvaiCharacter not found. Check scene setup.");
             return;
+        }
+
+        if (characterAnimator == null)
+        {
+            characterAnimator = _convaiCharacter.GetComponent<Animator>();
+            if (characterAnimator == null)
+            {
+                characterAnimator = _convaiCharacter.GetComponentInChildren<Animator>();
+            }
         }
 
         _convaiCharacter.OnCharacterReady += HandleCharacterReady;
@@ -101,10 +116,22 @@ public class ConvaiNPCBridge : MonoBehaviour
         => Emit("{\"type\":\"UNITY_READY\"}");
 
     private void HandleSpeechStarted()
-        => Emit("{\"type\":\"TURN_STARTED\"}");
+    {
+        Emit("{\"type\":\"TURN_STARTED\"}");
+        if (characterAnimator != null && !string.IsNullOrEmpty(speakingParameterName))
+        {
+            characterAnimator.SetBool(speakingParameterName, true);
+        }
+    }
 
     private void HandleTurnCompleted(bool wasInterrupted)
-        => Emit("{\"type\":\"TURN_DONE\"}");
+    {
+        Emit("{\"type\":\"TURN_DONE\"}");
+        if (characterAnimator != null && !string.IsNullOrEmpty(speakingParameterName))
+        {
+            characterAnimator.SetBool(speakingParameterName, false);
+        }
+    }
 
     private void HandleSessionStateChanged(SessionState state)
     {

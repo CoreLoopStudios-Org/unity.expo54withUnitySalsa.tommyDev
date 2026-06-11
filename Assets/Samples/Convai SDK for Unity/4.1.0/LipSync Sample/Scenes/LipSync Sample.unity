@@ -705,6 +705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fff089a837fd6428850be8c2bcd1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConvaiNPCBridge
+  characterAnimator: {fileID: 1639602654}
+  speakingParameterName: IsSpeaking
 --- !u!1 &600414035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,6 +2586,11 @@ Transform:
   - {fileID: 739405269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1639602654 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3155937532418062292, guid: c9545ad81de3ed243bdce7ffde4b71bd, type: 3}
+  m_PrefabInstance: {fileID: 1678221696841572227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1673135333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3030,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fff089a837fd6428850be8c2bcd1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConvaiNPCBridge
+  characterAnimator: {fileID: 0}
+  speakingParameterName: IsSpeaking
 --- !u!1001 &1833562211
 PrefabInstance:
   m_ObjectHideFlags: 0
