@@ -1414,7 +1414,7 @@ MonoBehaviour:
     <LocalAudioPolicy>k__BackingField:
       <StartMutedInPushToTalk>k__BackingField: 1
       <EnableAcousticEchoCancellation>k__BackingField: 0
-      <PushToTalkStartupMode>k__BackingField: 0
+      <PushToTalkStartupMode>k__BackingField: 1
     <PushToTalkPolicy>k__BackingField:
       <EnableServerSttToggle>k__BackingField: 1
       <InterruptBotOnPress>k__BackingField: 0
