@@ -2165,8 +2165,8 @@ MonoBehaviour:
   _configurationSource: 0
   _configurationSourceInitialized: 1
   _characterConfigAsset: {fileID: 0}
-  _characterId: 4107a0d4-45ff-11f1-a299-42010a7be02c
-  _characterName: Dana
+  _characterId: 98de9584-45f4-11f1-bf55-42010a7be02c
+  _characterName: Yael Avraham
   _nameTagColor: {r: 1, g: 1, b: 1, a: 1}
   _autoConnect: 1
   _enableRemoteAudio: 1
@@ -2834,12 +2834,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 174.31418
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 456.248
       objectReference: {fileID: 0}
     - target: {fileID: 2938434110472310800, guid: 2a227c28daac328438a90156a33eda44, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2990,7 +3014,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1800341006}
-  - component: {fileID: 1800341007}
   m_Layer: 0
   m_Name: Convai
   m_TagString: Untagged
@@ -3018,20 +3041,6 @@ Transform:
   - {fileID: 109986983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1800341007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800341005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97fff089a837fd6428850be8c2bcd1af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ConvaiNPCBridge
-  characterAnimator: {fileID: 0}
-  speakingParameterName: IsSpeaking
 --- !u!1001 &1833562211
 PrefabInstance:
   m_ObjectHideFlags: 0
