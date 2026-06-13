@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using Convai.Domain.DomainEvents.Session;
 using Convai.Runtime.Components;
 using UnityEngine;
-
+using Azesmway.Unity; 
 /// <summary>
 /// RN → Unity bridge. Attach this to a GameObject named exactly "ConvaiNPC" in the live scene.
 /// The RN app calls: unityInstance.SendMessage("ConvaiNPC", method, payload)
@@ -140,16 +140,18 @@ public class ConvaiNPCBridge : MonoBehaviour
     }
 
     // ── WebGL → page JS ───────────────────────────────────────────────────────
-
-    private static void Emit(string json)
+    
+    private void Emit(string json)
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        SendToRN(json);
-#else
-        Debug.Log("[ConvaiNPCBridge] Emit: " + json);
-#endif
+        if (UnityMessageManager.Instance != null)
+        {
+            UnityMessageManager.Instance.SendMessageToRN(json);
+        }
+        else
+        {
+            Debug.LogWarning($"[ConvaiNPCBridge] UnityMessageManager instance missing. Local log: {json}");
+        }
     }
-
     // ── Audio unlock ──────────────────────────────────────────────────────────
 
     /// <summary>
