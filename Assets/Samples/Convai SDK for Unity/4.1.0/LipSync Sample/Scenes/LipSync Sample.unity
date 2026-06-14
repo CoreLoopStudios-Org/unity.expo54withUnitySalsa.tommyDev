@@ -1591,7 +1591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -25}
+  m_AnchoredPosition: {x: 610.7916, y: -118.44495}
   m_SizeDelta: {x: 1080, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &930960471
@@ -2163,8 +2163,8 @@ MonoBehaviour:
   _configurationSource: 0
   _configurationSourceInitialized: 1
   _characterConfigAsset: {fileID: 0}
-  _characterId: 4107a0d4-45ff-11f1-a299-42010a7be02c
-  _characterName: Dana
+  _characterId: 98de9584-45f4-11f1-bf55-42010a7be02c
+  _characterName: Yael Avraham
   _nameTagColor: {r: 1, g: 1, b: 1, a: 1}
   _autoConnect: 1
   _enableRemoteAudio: 1
@@ -2827,12 +2827,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 174.13495
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364878618802432524, guid: 2a227c28daac328438a90156a33eda44, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 472.24115
       objectReference: {fileID: 0}
     - target: {fileID: 2938434110472310800, guid: 2a227c28daac328438a90156a33eda44, type: 3}
       propertyPath: m_AnchoredPosition.x
