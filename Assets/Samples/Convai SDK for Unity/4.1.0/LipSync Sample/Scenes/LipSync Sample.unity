@@ -661,6 +661,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ConvaiBridgeTester
   bridge: {fileID: 500421393}
   testMessage: Hello, how are you?
+--- !u!1 &469856250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8532025578530043668, guid: c9545ad81de3ed243bdce7ffde4b71bd, type: 3}
+  m_PrefabInstance: {fileID: 1678221696841572227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &500421391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,14 +2238,6 @@ MonoBehaviour:
     transitionDurationIn: 0.2
     activeDuration: 0
     transitionDurationOut: 0.15
-  - comboName: Angry
-    intervalMode: 1
-    fixedInterval: 3
-    randomIntervalMin: 15
-    randomIntervalMax: 30
-    transitionDurationIn: 0.2
-    activeDuration: 2
-    transitionDurationOut: 0.15
 --- !u!1 &1191887855
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,6 +3230,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2887103485037424371, guid: fdd25822ce484d44dae163a4072c590b, type: 3}
   m_PrefabInstance: {fileID: 1833562211}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1960559270 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3155937532418062292, guid: c9545ad81de3ed243bdce7ffde4b71bd, type: 3}
+  m_PrefabInstance: {fileID: 1678221696841572227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960559271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469856250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17a1674ac19751489feca9ec0c62c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakingAnimationController
+  animator: {fileID: 1960559270}
+  convaiCharacter: {fileID: 1178424928}
+  animationLayerIndex: 1
+  lerpSpeed: 5
+  isSpeaking: 0
 --- !u!1001 &1678221696841572227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4336,7 +4355,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8532025578530043668, guid: c9545ad81de3ed243bdce7ffde4b71bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1960559271}
   m_SourcePrefab: {fileID: 100100000, guid: c9545ad81de3ed243bdce7ffde4b71bd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
